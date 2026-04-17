@@ -357,29 +357,29 @@ OldaleTown_Text_ThisIsAPokemonMart:
 	.string "a promotional item.$"
 
 OldaleTown_Text_PotionExplanation:
-	.string "A POTION can be used anytime, so it's\n"
-	.string "even more useful than a POKéMON CENTER\l"
-	.string "in certain situations.$"
+        .string "This BIO-REGEN STIPEND is for\n"
+        .string "official use only. Use it to optimize\l"
+        .string "your high-value organic assets.$"
 
 OldaleTown_Text_WaitDontComeInHere:
 	.string "Aaaaah! Wait!\n"
 	.string "Please don't come in here.\p"
-	.string "I just discovered the footprints of\n"
-	.string "a rare POKéMON!\p"
+	.string "SCAN COMPLETE. Unauthorized biometric\n"
+	.string "signatures detected in this sector.\p"
 	.string "Wait until I finish sketching\n"
 	.string "them, okay?$"
 
 OldaleTown_Text_DiscoveredFootprints:
-	.string "I just discovered the footprints of\n"
-	.string "a rare POKéMON!\p"
+	.string "SCAN COMPLETE. Unauthorized biometric\n"
+	.string "signatures detected in this sector.\p"
 	.string "Wait until I finish sketching\n"
 	.string "them, okay?$"
 
 OldaleTown_Text_FinishedSketchingFootprints:
-	.string "I finished sketching the footprints of\n"
-	.string "a rare POKéMON.\p"
-	.string "But it turns out they were only my\n"
-	.string "own footprints…$"
+	.string "Clearance level 1 confirmed. You may\n"
+	.string "proceed to the Testing Grounds.\p"
+	.string "Wait... I am scanning my own\n"
+	.string "ID badge. This is embarrassing...$"
 
 OldaleTown_Text_MayLetsGoBack:
 	.string "MAY: {PLAYER}{KUN}!\n"
