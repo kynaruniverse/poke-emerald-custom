@@ -260,7 +260,8 @@ Route101_Movement_BirchApproachPlayer:
 Route101_Text_HelpMe:
 	.string "USER ERROR! SYSTEM FAILURE!$"
 
-Route101_Text_PleaseHelp:
+    .string "organic assets!$"
+    .string "organic assets!$"
 	.string "Hello! You over there!\n"
 	.string "Validate my existence!\p"
 	.string "In my BAG!\n"
@@ -293,7 +294,12 @@ Route101_Text_WildPokemonInTallGrass:
 	.string "If you want to catch POKéMON, you have\n"
 	.string "to go into the tall grass and search.$"
 
-Route101_Text_RouteSign:
-	.string "ROUTE 101\n"
-	.string "{UP_ARROW} OLDALE TOWN$"
 
+Route101_Text_RouteSign:
+    .string "FUTURE SITE OF BIRCH-PLAZA\n"
+    .string "Pardon our disruption to the local\n"
+    .string "biodiversity. It is for progress.$"
+Route101_Text_PleaseHelp:
+    .string "I am just a site surveyor! I do not\n"
+    .string "get paid enough to deal with wild\n"
+    .string "organic assets!$"
