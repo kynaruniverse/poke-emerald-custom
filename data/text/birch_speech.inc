@@ -1,13 +1,13 @@
 gText_Birch_Welcome::
 	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is BIRCH.\p"
+	.string "Welcome to the Hoenn Ecosystem™!\p"
+	.string "I am BIRCH, Founder and CEO of\nBIRCH-STARTUP.\p"
 	.string "But everyone calls me the POKéMON\n"
 	.string "PROFESSOR.\p"
 	.string "$"
 
 gText_Birch_Pokemon::
-	.string "This is what we call a “POKéMON.”\p"
+	.string "This is a  'High-Value Asset.' \nWe call it a POKéMON for tax reasons.\p"
 	.string "\n"
 	.string "$"
 
