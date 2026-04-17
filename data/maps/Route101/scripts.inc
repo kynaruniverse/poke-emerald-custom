@@ -258,13 +258,13 @@ Route101_Movement_BirchApproachPlayer:
 	step_end
 
 Route101_Text_HelpMe:
-	.string "H-help me!$"
+	.string "USER ERROR! SYSTEM FAILURE!$"
 
 Route101_Text_PleaseHelp:
 	.string "Hello! You over there!\n"
-	.string "Please! Help!\p"
+	.string "Validate my existence!\p"
 	.string "In my BAG!\n"
-	.string "There's a POKé BALL!$"
+	.string "There's a PROTOTYPE ASSET!$"
 
 Route101_Text_DontLeaveMe:
 	.string "Wh-Where are you going?!\n"
