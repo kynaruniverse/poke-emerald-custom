@@ -1,33 +1,35 @@
 	.align 2
 gText_ConfirmSave::
-	.string "Would you like to save the game?$"
+	.string "You wanna lock in your progress\n"
+	.string "and save the game?$"
 
 gText_AlreadySavedFile::
-	.string "There is already a saved file.\n"
-	.string "Is it okay to overwrite it?$"
+	.string "There’s already a file saved.\n"
+	.string "Is it safe to overwrite it?$"
 
 gText_SavingDontTurnOff::
 	.string "SAVING…\n"
-	.string "DON'T TURN OFF THE POWER.$"
+	.string "DON’T CUT THE POWER.$"
 
 gText_PlayerSavedGame::
-	.string "{PLAYER} saved the game.$"
+	.string "{PLAYER} locked in the progress.$"
 
 gText_DifferentSaveFile::
 	.string "WARNING!\p"
-	.string "There is a different game file that\n"
-	.string "is already saved.\p"
-	.string "If you save now, the other file's\n"
-	.string "adventure, including items and\l"
-	.string "POKéMON, will be entirely lost.\p"
-	.string "Are you sure you want to save now\n"
-	.string "and overwrite the other save file?$"
+	.string "There’s a different game file\n"
+	.string "already on this system.\p"
+	.string "If you save now, that other yute's\n"
+	.string "adventure and squad will be\l"
+	.string "gone forever—it’s peak.\p"
+	.string "You sure you want to save now\n"
+	.string "and dead the other file?$"
 
 gText_SaveError::
 	.string "Save error.\p"
-	.string "Please exchange the\n"
-	.string "backup memory.$"
+	.string "The memory is moving bookey.\n"
+	.string "Exchange the backup memory.$"
 
 gText_SavingDontTurnOffPower::
 	.string "SAVING…\n"
-	.string "DON'T TURN OFF THE POWER.$"
+	.string "DON’T CUT THE POWER.$"
+

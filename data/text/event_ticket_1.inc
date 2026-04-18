@@ -1,41 +1,44 @@
 EventTicket_Text_ShowOldSeaMap:
 	.string "The ferry to SLATEPORT is…\p"
-	.string "I beg your pardon?\n"
-	.string "Can we sail to this place on the map?\p"
-	.string "I know someone who will help you better.\n"
-	.string "Please wait.$"
+	.string "Wait, what's that?\n"
+	.string "You’re tryna sail to this spot on the map?\p"
+	.string "Hold tight, I know a man who can\n"
+	.string "sort you out properly.\p"
+	.string "Wait there.$"
 
 EventTicket_Text_ThatPass:
 	.string "The ferry to SLATEPORT is…\p"
 	.string "Oh?\n"
-	.string "That PASS…$"
+	.string "That PASS you've got there…$"
 
 EventTicket_Text_ShowEonTicket:
-	.string "Aye, mate, are you the one who brought\n"
-	.string "that mighty odd PASS?\p"
-	.string "I'll tell you, you're trying to reach a\n"
-	.string "tiny spit of an island far in the south.\p"
-	.string "There's no telling what we'll encounter\n"
-	.string "once we reach there, aye.\l"
-	.string "That shivers my timbers!\p"
-	.string "All aboard!$"
+	.string "Safe, young blood. You the one with\n"
+	.string "that rare-looking PASS?\p"
+	.string "Listen, you’re tryna reach a tiny\n"
+	.string "little speck of an island way out south.\p"
+	.string "No telling what kind of madness we’ll\n"
+	.string "see once we land, trust me.\l"
+	.string "Got me feeling bare hype!\p"
+	.string "Everyone hop on!$"
 
 EventTicket_Text_SouthernIslandSailBack:
-	.string "Aye, mate, there's nothing here to\n"
-	.string "see or do on this forgettable island.\p"
-	.string "What say we sail back to LILYCOVE?$"
+	.string "Listen, fam, there’s absolutely nothing\n"
+	.string "to do on this dead island.\p"
+	.string "You ready to spin the boat back\n"
+	.string "to LILYCOVE?$"
 
 EventTicket_Text_SailHome:
-	.string "Aye, right, then!\n"
-	.string "Sail home we will!$"
+	.string "Standard!\n"
+	.string "We’re heading home, then!$"
 
 EventTicket_Text_AsYouLike:
-	.string "Aye, right, as you like, then.$"
+	.string "Safe, stay posted then.$"
 
 SouthernIsland_Interior_Text_Sign:
-	.string "“All dreams are but another reality.\n"
-	.string "Never forget…”$"
+	.string "“All dreams are just another reality.\n"
+	.string "Keep that same energy…”$"
 
 SouthernIsland_Exterior_Text_Sign:
 	.string "“Those whose memories fade seek to\n"
 	.string "carve them in their hearts…”$"
+

@@ -743,21 +743,21 @@ LittlerootTown_ProfessorBirchsLab_Text_ReceivedPokedex:
 	.string "{PLAYER} received the POKéDEX!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex:
-	.string "PROF. BIRCH: The POKéDEX is a high-tech\n"
-	.string "tool that automatically makes a record\l"
-	.string "of any POKéMON you meet or catch.\p"
-	.string "My kid, {RIVAL}, goes everywhere\n"
-	.string "with it.\p"
-	.string "Whenever my kid catches a rare POKéMON\n"
-	.string "and records its data in the POKéDEX,\l"
-	.string "why, {RIVAL} looks for me while I'm out\l"
-	.string "doing fieldwork, and shows me.$"
+	    .string "PROF. BIRCH: It tracks all the local pokes.\n"
+    .string "It tracks every Mon you come across\l"
+    .string "and logs their stats on the fly.\p"
+    .string "My kid, {RIVAL}, uses it to keep\n"
+    .string "tabs on the local movements.\p"
+    .string "Every time {RIVAL} spots a rare Mon\n"
+    .string "and records their stats in the log,\l"
+    .string "I get a ping. It keeps us one step\l"
+    .string "ahead of the rest. Get it?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait:
-	.string "PROF. BIRCH: Countless POKéMON\n"
-	.string "await you!\p"
-	.string "Argh, I'm getting the itch to get out\n"
-	.string "and do fieldwork again!$"
+    .string "PROF. BIRCH: There’s bare Mons out\n"
+    .string "there waiting to be bagged!\p"
+    .string "Proper makes me want to get out\n"
+    .string "of the lab and back on the strip!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MayGotPokedexTooTakeThese:
 	.string "MAY: Oh, wow, {PLAYER}{KUN}!\n"
@@ -771,7 +771,7 @@ LittlerootTown_ProfessorBirchsLab_Text_CatchCutePokemonWithPokeBalls:
 	.string "I'm going to look all over the place\n"
 	.string "because I want different POKéMON.\p"
 	.string "If I find any cute POKéMON, I'll catch\n"
-	.string "them with POKé BALLS!$"
+	.string "bag them with some P-Balls!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_OhYourBagsFull:
 	.string "Oh? Your BAG's full.$"

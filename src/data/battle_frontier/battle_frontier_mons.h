@@ -753,7 +753,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         .ball = BALL_POKE
     },
     [FRONTIER_MON_TREECKO] = {
-        .species = SPECIES_TREECKO,
+        .species = SPECIES_MACHOP,
         .moves = {MOVE_BULLET_SEED, MOVE_AERIAL_ACE, MOVE_QUICK_ATTACK, MOVE_DOUBLE_TEAM},
         .heldItem = ITEM_SCOPE_LENS,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 0, 252, 0),
@@ -761,7 +761,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         .ball = BALL_POKE
     },
     [FRONTIER_MON_TORCHIC] = {
-        .species = SPECIES_TORCHIC,
+        .species = SPECIES_HOUNDOUR,
         .moves = {MOVE_FIRE_SPIN, MOVE_QUICK_ATTACK, MOVE_SAND_ATTACK, MOVE_DOUBLE_TEAM},
         .heldItem = ITEM_BRIGHT_POWDER,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 252, 0),
@@ -769,7 +769,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         .ball = BALL_POKE
     },
     [FRONTIER_MON_MUDKIP] = {
-        .species = SPECIES_MUDKIP,
+        .species = SPECIES_MEOWTH,
         .moves = {MOVE_WHIRLPOOL, MOVE_ENDEAVOR, MOVE_MUD_SPORT, MOVE_MUD_SLAP},
         .heldItem = ITEM_FOCUS_BAND,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 252, 0),

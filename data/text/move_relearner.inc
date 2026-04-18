@@ -1,6 +1,8 @@
+@ Style: Technical expert, efficient, slightly street-smart (consistent with Move Tutor)
+
 MoveRelearner_Text_WouldLearnNewMoves:
-	.string "Hi, I'm the Move Relearner.\n"
-	.string "Would you like to learn new moves?$"
+	.string "Yo, I’m the Move Relearner.\n"
+	.string "Want to optimize your squad’s moveset?$"
 
 MoveRelearner_Text_LevelUpMoves:
 	.string "Level Up Moves$"
@@ -15,25 +17,25 @@ MoveRelearner_Text_TutormoveMoves:
 	.string "Tutor Moves$"
 
 MoveRelearner_Text_SeeYa:
-	.string "See ya!$"
+	.string "Laters!$"
 
 MoveRelearner_Text_AnythingElse:
-	.string "Is there anything else I may do for you?$"
+	.string "Anything else I can sort for you?$"
 
 MoveRelearner_Text_ChoosePkmn:
-	.string "Please choose your Pokémon.$"
+	.string "Select the POKéMON you want to fix up.$"
 
 MoveRelearner_Text_HaveNoPkmn:
-	.string "You have no Pokémon.$"
+	.string "You don't even have a squad on you.$"
 
 MoveRelearner_Text_CantTeachMoveToEgg:
-	.string "Sorry…\n"
-	.string "But an Egg can't learn moves.$"
+	.string "Allow it…\n"
+	.string "An EGG can't learn techniques yet.$"
 
 MoveRelearner_Text_CantTeachMoveToPkmn:
-	.string "Sorry…\p"
-	.string "It doesn't appear as if I have any move\n"
-	.string "I can teach that Pokémon.$"
+	.string "My bad…\p"
+	.string "Doesn't look like I have any moves\n"
+	.string "available for that POKéMON.$"
 
 MoveRelearner_Text_LevelUpMoveLWR::
 	.string "level up move$"
@@ -51,8 +53,9 @@ MoveRelearner_Text_MoveLWR::
 	.string "move$"
 
 MoveRelearner_Text_WhichXmoveShouldTeach:
-	.string "Which {STR_VAR_3} should I teach?$"
+	.string "Which {STR_VAR_3} should I teach them?$"
 
 MoveRelearner_Text_ThankYouComeAgain:
-	.string "Thank you for using our services.\n"
-	.string "Please come again!$"
+	.string "Your squad's looking sharper already.\n"
+	.string "Pull up anytime!$"
+

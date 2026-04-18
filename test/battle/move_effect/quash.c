@@ -11,8 +11,8 @@ DOUBLE_BATTLE_TEST("Quash-affected target will move last in the priority bracket
     GIVEN {
         PLAYER(SPECIES_VOLBEAT) { Speed(10); Ability(ABILITY_PRANKSTER); }
         PLAYER(SPECIES_WOBBUFFET) { Speed(30); }
-        OPPONENT(SPECIES_TORCHIC) { Speed(20); }
-        OPPONENT(SPECIES_TREECKO) { Speed(40); }
+        OPPONENT(SPECIES_HOUNDOUR) { Speed(20); }
+        OPPONENT(SPECIES_MACHOP) { Speed(40); }
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_QUASH, target: opponentRight); }
     } SCENE {
@@ -30,8 +30,8 @@ DOUBLE_BATTLE_TEST("Quash is not affected by dynamic speed")
         ASSUME(GetMoveEffect(MOVE_TAILWIND) == EFFECT_TAILWIND);
         PLAYER(SPECIES_VOLBEAT) { Speed(10); Ability(ABILITY_PRANKSTER); }
         PLAYER(SPECIES_WOBBUFFET) { Speed(30); }
-        OPPONENT(SPECIES_TORCHIC) { Speed(50); }
-        OPPONENT(SPECIES_TREECKO) { Speed(40); }
+        OPPONENT(SPECIES_HOUNDOUR) { Speed(50); }
+        OPPONENT(SPECIES_MACHOP) { Speed(40); }
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_QUASH, target: opponentLeft);
                MOVE(opponentRight, MOVE_TAILWIND);
@@ -85,8 +85,8 @@ DOUBLE_BATTLE_TEST("Quash-affected targets move from fastest to slowest (Gen 8+)
     GIVEN {
         PLAYER(SPECIES_VOLBEAT) { Speed(10); Ability(ABILITY_PRANKSTER); }
         PLAYER(SPECIES_WOBBUFFET) { Speed(70); }
-        OPPONENT(SPECIES_TORCHIC) { Speed(speedLeft); }
-        OPPONENT(SPECIES_TREECKO) { Speed(speedRight); }
+        OPPONENT(SPECIES_HOUNDOUR) { Speed(speedLeft); }
+        OPPONENT(SPECIES_MACHOP) { Speed(speedRight); }
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_QUASH, target: opponentRight);
                MOVE(playerRight, MOVE_QUASH, target: opponentLeft);
@@ -117,8 +117,8 @@ DOUBLE_BATTLE_TEST("Quash-affected mon that acted early via After You is not aff
         ASSUME(GetMoveEffect(MOVE_AFTER_YOU) == EFFECT_AFTER_YOU);
         PLAYER(SPECIES_VOLBEAT) { Speed(20); Ability(ABILITY_PRANKSTER); }
         PLAYER(SPECIES_WOBBUFFET) { Speed(30); }
-        OPPONENT(SPECIES_TORCHIC) { Speed(10); }
-        OPPONENT(SPECIES_TREECKO) { Speed(40); }
+        OPPONENT(SPECIES_HOUNDOUR) { Speed(10); }
+        OPPONENT(SPECIES_MACHOP) { Speed(40); }
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_QUASH, target: opponentLeft);
                MOVE(opponentRight, MOVE_AFTER_YOU, target: opponentLeft);

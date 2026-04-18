@@ -8,7 +8,7 @@ AI_SINGLE_BATTLE_TEST("AI will not try to lower opposing stats if target is prot
     enum Ability ability;
     u32 species, move;
 
-    PARAMETRIZE { ability = ABILITY_SPEED_BOOST;  species = SPECIES_TORCHIC; move = MOVE_SCARY_FACE; }
+    PARAMETRIZE { ability = ABILITY_SPEED_BOOST;  species = SPECIES_HOUNDOUR; move = MOVE_SCARY_FACE; }
     PARAMETRIZE { ability = ABILITY_HYPER_CUTTER; species = SPECIES_KRABBY;  move = MOVE_GROWL; }
     PARAMETRIZE { ability = ABILITY_BIG_PECKS;    species = SPECIES_PIDGEY;  move = MOVE_SCREECH; }
     PARAMETRIZE { ability = ABILITY_ILLUMINATE;   species = SPECIES_STARYU;  move = MOVE_SAND_ATTACK; }

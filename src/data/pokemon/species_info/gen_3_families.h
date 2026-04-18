@@ -4,7 +4,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #endif
 
 #if P_FAMILY_TREECKO
-    [SPECIES_TREECKO] =
+    [SPECIES_MACHOP] =
     {
         .baseHP        = 40,
         .baseAttack    = 45,
@@ -296,7 +296,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #endif //P_FAMILY_TREECKO
 
 #if P_FAMILY_TORCHIC
-    [SPECIES_TORCHIC] =
+    [SPECIES_HOUNDOUR] =
     {
         .baseHP        = 45,
         .baseAttack    = 60,
@@ -628,7 +628,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #endif //P_FAMILY_TORCHIC
 
 #if P_FAMILY_MUDKIP
-    [SPECIES_MUDKIP] =
+    [SPECIES_MEOWTH] =
     {
         .baseHP        = 50,
         .baseAttack    = 70,

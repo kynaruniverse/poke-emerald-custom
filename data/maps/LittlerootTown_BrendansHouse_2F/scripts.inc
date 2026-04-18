@@ -285,18 +285,14 @@ PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
 	.string "everything's all there on your desk.$"
 
 PlayersHouse_2F_Text_Notebook:
-	.string "{PLAYER} flipped open the notebook.\p"
-	.string "ADVENTURE RULE NO. 1\n"
-	.string "Open the MENU with START.\p"
-	.string "ADVENTURE RULE NO. 2\n"
-	.string "Record your progress with SAVE.\p"
-	.string "The remaining pages are blank…$"
-
-Common_Text_LookCloserAtMap:
-	.string "{PLAYER} took a closer look at the\n"
-	.string "{REGION} region map.$"
+    .string "{PLAYER} flipped open the notebook.\p"
+    .string "STREET RULE NO. 1\n"
+    .string "Don’t talk to feds.\p"
+    .string "STREET RULE NO. 2\n"
+    .string "Always keep your Mon active.\p"
+    .string "The remaining pages are blank…$"
 
 PlayersHouse_2F_Text_ItsAGameCube:
-	.string "It's a Nintendo GameCube.\p"
-	.string "A Game Boy Advance is connected to\n"
-	.string "serve as the Controller.$"
+    .string "It’s a dusty console.\p"
+    .string "Mom says I spend too much time on\n"
+    .string "this instead of getting to work.$"

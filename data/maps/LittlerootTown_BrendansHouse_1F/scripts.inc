@@ -283,8 +283,11 @@ LittlerootTown_BrendansHouse_1F_Movement_BrendanGoUpstairs2:
 	walk_up
 	step_end
 
-PlayersHouse_1F_Text_IsntItNiceInHere:
-	.string "MOM: See, {PLAYER}?\n"
+_Text_IsntItNiceInHere:
+    .string "Finally out the van? You look a mess.\n"
+    .string "Go upstairs, check the time, then go\n"
+    .string "find a hustle or something. You’re\n"
+    .string "bare cluttering up my front room.$"
 	.string "Isn't it nice in here, too?$"
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock:

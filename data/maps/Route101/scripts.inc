@@ -258,48 +258,44 @@ Route101_Movement_BirchApproachPlayer:
 	step_end
 
 Route101_Text_HelpMe:
-	.string "USER ERROR! SYSTEM FAILURE!$"
+    .string "OI! YO!\n"
+    .string "Don’t just stand there recording!\p"
+    .string "In my BAG!\n"
+    .string "Grab a hitter and back me up!$"
 
-    .string "organic assets!$"
-    .string "organic assets!$"
-	.string "Hello! You over there!\n"
-	.string "Validate my existence!\p"
-	.string "In my BAG!\n"
-	.string "There's a PROTOTYPE ASSET!$"
+Route101_Text_PleaseHelp:
+    .string "ALLOW IT! This thing is moving mad!\n"
+    .string "I think it knows I sold its cousin\n"
+    .string "a chalky Rare Candy! Grab a Mon!$"
 
 Route101_Text_DontLeaveMe:
-	.string "Wh-Where are you going?!\n"
-	.string "Don't leave me like this!$"
+    .string "Where you going?!\n"
+    .string "You really gonna leave me to get\n"
+    .string "creased? Don’t be a snitch, help!$"
 
 Route101_Text_YouSavedMe:
-	.string "PROF. BIRCH: Whew…\p"
-	.string "I was in the tall grass studying wild\n"
-	.string "POKéMON when I was jumped.\p"
-	.string "You saved me.\n"
-	.string "Thanks a lot!\p"
-	.string "Oh?\p"
-	.string "Hi, you're {PLAYER}{KUN}!\p"
-	.string "This is not the place to chat, so come\n"
-	.string "by my POKéMON LAB later, okay?$"
+    .string "PROF. BIRCH: Safe, cuz.\p"
+    .string "I was just out here doing some...\n"
+    .string "unlicensed research, and got jumped.\p"
+    .string "You handled that proper.\n"
+    .string "Respect.\p"
+    .string "Oh? You’re {PLAYER}, yeah?\n"
+    .string "The new face on the block.\p"
+    .string "C’mon, let’s get off the curb and\n"
+    .string "head to my Lab before Feds show up.$"
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
-	.string "If POKéMON get tired, take them to\n"
-	.string "a POKéMON CENTER.\p"
-	.string "There's a POKéMON CENTER in OLDALE\n"
-	.string "TOWN right close by.$"
+    .string "If your Mon is looking peak, get to\n"
+    .string "the POKéMON CENTER.\p"
+    .string "There is one in OLDALE TOWN.\n"
+    .string "Don’t let your team get smoked.$"
 
 Route101_Text_WildPokemonInTallGrass:
-	.string "Wild POKéMON will jump out at you in\n"
-	.string "tall grass.\p"
-	.string "If you want to catch POKéMON, you have\n"
-	.string "to go into the tall grass and search.$"
-
+    .string "The long grass is peak, man.\n"
+    .string "Wild Mons will back out the shank\n"
+    .string "the second they see you stepping.$"
 
 Route101_Text_RouteSign:
-    .string "FUTURE SITE OF BIRCH-PLAZA\n"
-    .string "Pardon our disruption to the local\n"
-    .string "biodiversity. It is for progress.$"
-Route101_Text_PleaseHelp:
-    .string "I am just a site surveyor! I do not\n"
-    .string "get paid enough to deal with wild\n"
-    .string "organic assets!$"
+    .string "ROUTE 101\n"
+    .string "Watch your pockets. No snitching.\n"
+    .string "Local council rules apply.$"

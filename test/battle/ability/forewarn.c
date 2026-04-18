@@ -61,8 +61,8 @@ DOUBLE_BATTLE_TEST("Forewarn does not trigger if a mon switches in while the opp
         PLAYER(SPECIES_MUSHARNA) { Ability(ABILITY_FOREWARN); }
         OPPONENT(SPECIES_WYNAUT) { HP(1); }
         OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_TREECKO);
-        OPPONENT(SPECIES_TORCHIC);
+        OPPONENT(SPECIES_MACHOP);
+        OPPONENT(SPECIES_HOUNDOUR);
     } WHEN {
         TURN {
             MOVE(opponentRight, MOVE_HEALING_WISH);

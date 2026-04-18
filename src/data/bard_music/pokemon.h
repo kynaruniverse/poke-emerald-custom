@@ -2020,7 +2020,7 @@ static const struct BardSoundTemplate sBardSoundTemplates_Pokemon[NUM_SPECIES][M
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [SPECIES_TREECKO] = {
+    [SPECIES_MACHOP] = {
         { .songId = PHONEME_ID(PH_FLEECE_BLEND) },
         { .songId = PHONEME_ID(PH_GOAT_BLEND) },
         PREV_BARD_SOUND,
@@ -2044,7 +2044,7 @@ static const struct BardSoundTemplate sBardSoundTemplates_Pokemon[NUM_SPECIES][M
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [SPECIES_TORCHIC] = {
+    [SPECIES_HOUNDOUR] = {
         { .songId = PHONEME_ID(PH_GOAT_BLEND) },
         { .songId = PHONEME_ID(PH_KIT_SOLO) },
         PREV_BARD_SOUND,
@@ -2068,7 +2068,7 @@ static const struct BardSoundTemplate sBardSoundTemplates_Pokemon[NUM_SPECIES][M
         NULL_BARD_SOUND,
         NULL_BARD_SOUND,
     },
-    [SPECIES_MUDKIP] = {
+    [SPECIES_MEOWTH] = {
         { .songId = PHONEME_ID(PH_STRUT_SOLO) },
         { .songId = PHONEME_ID(PH_KIT_SOLO) },
         PREV_BARD_SOUND,

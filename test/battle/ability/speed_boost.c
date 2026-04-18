@@ -4,7 +4,7 @@
 SINGLE_BATTLE_TEST("Speed Boost gradually boosts Speed")
 {
     GIVEN {
-        PLAYER(SPECIES_TORCHIC) { Ability(ABILITY_SPEED_BOOST); Speed(99); }
+        PLAYER(SPECIES_HOUNDOUR) { Ability(ABILITY_SPEED_BOOST); Speed(99); }
         OPPONENT(SPECIES_WOBBUFFET) { Speed(100); }
     } WHEN {
         TURN { MOVE(player, MOVE_CELEBRATE); MOVE(opponent, MOVE_CELEBRATE); }

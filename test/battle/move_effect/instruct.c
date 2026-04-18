@@ -372,7 +372,7 @@ DOUBLE_BATTLE_TEST("Instructed move will be redirected by Rage Powder after inst
         ASSUME(GetMoveEffect(MOVE_RAGE_POWDER) == EFFECT_FOLLOW_ME);
         ASSUME(IsPowderMove(MOVE_RAGE_POWDER) == TRUE);
         ASSUME(GetMoveEffect(MOVE_SOAK) == EFFECT_SOAK);
-        PLAYER(SPECIES_TREECKO);
+        PLAYER(SPECIES_MACHOP);
         PLAYER(SPECIES_SCEPTILE);
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WYNAUT);
@@ -398,7 +398,7 @@ DOUBLE_BATTLE_TEST("Instructed move will be redirected by Rage Powder after inst
 DOUBLE_BATTLE_TEST("Instruct message references the correct battlers")
 {
     GIVEN {
-        PLAYER(SPECIES_TREECKO);
+        PLAYER(SPECIES_MACHOP);
         PLAYER(SPECIES_SCEPTILE);
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WYNAUT);

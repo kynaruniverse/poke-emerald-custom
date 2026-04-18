@@ -258,13 +258,13 @@
 #define SPECIES_LUGIA                                   249
 #define SPECIES_HO_OH                                   250
 #define SPECIES_CELEBI                                  251
-#define SPECIES_TREECKO                                 252
+#define SPECIES_MACHOP                                 252
 #define SPECIES_GROVYLE                                 253
 #define SPECIES_SCEPTILE                                254
-#define SPECIES_TORCHIC                                 255
+#define SPECIES_HOUNDOUR                                 255
 #define SPECIES_COMBUSKEN                               256
 #define SPECIES_BLAZIKEN                                257
-#define SPECIES_MUDKIP                                  258
+#define SPECIES_MEOWTH                                  258
 #define SPECIES_MARSHTOMP                               259
 #define SPECIES_SWAMPERT                                260
 #define SPECIES_POOCHYENA                               261

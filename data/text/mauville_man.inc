@@ -1,63 +1,66 @@
-@ Only contains the text for the Mauville Man named Giddy. The rest is in scripts/mauville_man.inc
+@ Only contains the text for the Mauville Man named Giddy. 
+@ Style: Whimsical, Aesthetic-obsessed, "Vibey"
+
 GiddyText_SoPretty::
-	.string " so pretty!$"
+	.string " so aesthetic!$"
 
 GiddyText_SoDarling::
-	.string " so darling!$"
+	.string " so precious!$"
 
 GiddyText_SoRelaxed::
-	.string " so relaxed!$"
+	.string " so chill!$"
 
 GiddyText_SoSunny::
-	.string " so sunny!$"
+	.string " so bright!$"
 
 GiddyText_SoDesirable::
-	.string " so desirable!$"
+	.string " such a vibe!$"
 
 GiddyText_SoExciting::
-	.string " so exciting!$"
+	.string " so hype!$"
 
 GiddyText_SoAmusing::
-	.string " so amusing!$"
+	.string " so jokes!$"
 
 GiddyText_SoMagical::
-	.string " so magical!$"
+	.string " so unreal!$"
 
 GiddyText_Is::
 	.string " is$"
 
 GiddyText_DontYouAgree::
 	.string "\n"
-	.string "Don't you agree?$"
+	.string "You feel me?$"
 
 GiddyText_ISoWantToGoOnAVacation::
-	.string "I so want to go on a vacation.\n"
-	.string "Would you happen to know a nice place?$"
+	.string "I lowkey need a vacation right now.\n"
+	.string "Do you know any places with elite vibes?$"
 
 GiddyText_IBoughtCrayonsWith120Colors::
-	.string "I bought crayons with 120 colors!\n"
-	.string "Don't you think that's nice?$"
+	.string "I copped crayons with 120 colors!\n"
+	.string "Isn't the variety just mad?$"
 
 GiddyText_WouldntItBeNiceIfWeCouldFloat::
-	.string "Wouldn't it be nice if we could float\n"
-	.string "away on a cloud of bubbles?$"
+	.string "Wouldn't it be a mood if we could just\n"
+	.string "float away on a cloud of bubbles?$"
 
 GiddyText_WhenYouWriteOnASandyBeach::
-	.string "When you write on a sandy beach,\n"
-	.string "they wash away. It makes me sad.$"
+	.string "When you write in the sand and the waves\n"
+	.string "wash it away… it actually ruins the day.$"
 
 GiddyText_WhatsTheBottomOfTheSeaLike::
-	.string "What's the bottom of the sea like?\n"
-	.string "Just once I would so love to go!$"
+	.string "What’s the bottom of the sea like?\n"
+	.string "I’d love to see it for the 'gram!$"
 
 GiddyText_WhenYouSeeTheSettingSunDoesIt::
-	.string "When you see the setting sun, does it\n"
-	.string "make you want to go home?$"
+	.string "When you see the sunset, does it\n"
+	.string "make you want to head back to the yard?$"
 
 GiddyText_LyingBackInTheGreenGrass::
 	.string "Lying back in the green grass…\n"
-	.string "Oh, it's so, so nice!$"
+	.string "Honestly, the vibes are 10/10!$"
 
 GiddyText_SecretBasesAreSoWonderful::
-	.string "SECRET BASES are so wonderful!\n"
-	.string "Can't you feel the excitement?$"
+	.string "SECRET BASES are so elite!\n"
+	.string "Can’t you feel the hype?$"
+

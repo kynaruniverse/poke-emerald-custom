@@ -68,8 +68,8 @@ SINGLE_BATTLE_TEST("Normalize still makes Freeze-Dry do super effective damage t
     GIVEN {
         ASSUME(GetMoveType(MOVE_FREEZE_DRY) == TYPE_ICE);
         ASSUME(GetMoveEffect(MOVE_FREEZE_DRY) == EFFECT_SUPER_EFFECTIVE_ON_ARG);
-        ASSUME(GetSpeciesType(SPECIES_MUDKIP, 0) == TYPE_WATER);
-        PLAYER(SPECIES_MUDKIP);
+        ASSUME(GetSpeciesType(SPECIES_MEOWTH, 0) == TYPE_WATER);
+        PLAYER(SPECIES_MEOWTH);
         OPPONENT(SPECIES_SKITTY) { Ability(ability); Moves(MOVE_FREEZE_DRY); }
     } WHEN {
         TURN { MOVE(opponent, MOVE_FREEZE_DRY); }

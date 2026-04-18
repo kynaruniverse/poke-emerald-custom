@@ -395,7 +395,7 @@ DOUBLE_BATTLE_TEST("Spread Moves: Not very effective Message on both opposing mo
         PLAYER(SPECIES_WOBBUFFET);
         PLAYER(SPECIES_WYNAUT);
         OPPONENT(SPECIES_CHIKORITA);
-        OPPONENT(SPECIES_TREECKO);
+        OPPONENT(SPECIES_MACHOP);
     } WHEN {
         TURN { MOVE(playerLeft, MOVE_PRECIPICE_BLADES); }
     } SCENE {
@@ -411,7 +411,7 @@ DOUBLE_BATTLE_TEST("Spread Moves: Not very effective message on both player mons
     GIVEN {
         ASSUME(GetMoveTarget(MOVE_PRECIPICE_BLADES) == TARGET_BOTH);
         PLAYER(SPECIES_CHIKORITA);
-        PLAYER(SPECIES_TREECKO);
+        PLAYER(SPECIES_MACHOP);
         OPPONENT(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WYNAUT);
     } WHEN {

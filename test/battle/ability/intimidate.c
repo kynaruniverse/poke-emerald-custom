@@ -225,8 +225,8 @@ DOUBLE_BATTLE_TEST("Intimidate is not going to trigger if a mon switches out thr
         PLAYER(SPECIES_EKANS) { Ability(ABILITY_INTIMIDATE); }
         OPPONENT(SPECIES_WYNAUT) { HP(1); }
         OPPONENT(SPECIES_WOBBUFFET);
-        OPPONENT(SPECIES_TREECKO);
-        OPPONENT(SPECIES_TORCHIC);
+        OPPONENT(SPECIES_MACHOP);
+        OPPONENT(SPECIES_HOUNDOUR);
     } WHEN {
         TURN {
             MOVE(opponentRight, MOVE_HEALING_WISH);
