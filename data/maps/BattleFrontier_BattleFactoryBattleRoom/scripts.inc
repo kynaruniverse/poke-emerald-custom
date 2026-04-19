@@ -71,6 +71,7 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_EnterRoom::
 	addobject LOCALID_FACTORY_BATTLE_OPPONENT
 	applymovement LOCALID_FACTORY_BATTLE_OPPONENT, BattleFrontier_BattleFactoryBattleRoom_Movement_OpponentEnter
 	waitmovement 0
+
 BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleOpponent::
 	goto_if_ne VAR_TEMP_F, FRONTIER_BRAIN_NOT_READY, BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNoland
 	palace_getopponentintro
@@ -84,6 +85,7 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleOpponent::
 	waitstate
 	switch VAR_RESULT
 	case 1, BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedOpponent
+
 BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyLost::
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST
 	goto BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobby
@@ -93,7 +95,7 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedOpponent::
 	goto_if_eq VAR_RESULT, MAX_STREAK, BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementWinStreak
 	addvar VAR_RESULT, 1
 	setorcopyvar VAR_0x8006, VAR_RESULT
-	factory_set FACTORY_DATA_WIN_STREAK_SWAPS  @ uses VAR_0x8006 above
+	factory_set FACTORY_DATA_WIN_STREAK_SWAPS
 BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementWinStreak::
 	call BattleFrontier_EventScript_IncrementWinStreak
 BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementBattleNum::
@@ -105,6 +107,7 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementBattleNum::
 	setvar VAR_0x8006, 1
 	warp MAP_BATTLE_FRONTIER_BATTLE_FACTORY_PRE_BATTLE_ROOM, 8, 8
 	waitstate
+
 BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyWon::
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_WON
 	goto BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobby
@@ -118,6 +121,7 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNoland::
 	goto_if_ne VAR_RESULT, FALSE, BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandSilver
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_NolandImFactoryHead, MSGBOX_DEFAULT
 	frontier_set FRONTIER_DATA_HEARD_BRAIN_SPEECH
+
 BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandSilver::
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_ShakeOutKnowledgeBringItOn, MSGBOX_DEFAULT
 	call BattleFrontier_BattleFactoryBattleRoom_EventScript_DoNolandBattle
@@ -144,6 +148,7 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_IntroNolandGold::
 	goto_if_ne VAR_RESULT, FALSE, BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandGold
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_HarderLookThanLastTime, MSGBOX_DEFAULT
 	frontier_set FRONTIER_DATA_HEARD_BRAIN_SPEECH
+
 BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNolandGold::
 	msgbox BattleFrontier_BattleFactoryBattleRoom_Text_AllRightBringItOn, MSGBOX_DEFAULT
 	call BattleFrontier_BattleFactoryBattleRoom_EventScript_DoNolandBattle
@@ -178,7 +183,7 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNoland::
 	goto_if_eq VAR_RESULT, MAX_STREAK, BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementWinStreak
 	addvar VAR_RESULT, 1
 	setorcopyvar VAR_0x8006, VAR_RESULT
-	factory_set FACTORY_DATA_WIN_STREAK_SWAPS  @ uses VAR_0x8006 above
+	factory_set FACTORY_DATA_WIN_STREAK_SWAPS
 	factory_get FACTORY_DATA_WIN_STREAK
 	goto_if_eq VAR_RESULT, MAX_STREAK, BattleFrontier_BattleFactoryBattleRoom_EventScript_IncrementBattleNum
 	addvar VAR_RESULT, 1
@@ -240,71 +245,71 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_ScientistsFaceBattle::
 	return
 
 BattleFrontier_BattleFactoryBattleRoom_Text_GetAMoveOn:
-	.string "Hey, hey!\n"
-	.string "Get a move on!$"
+	.string "Oi, move it!\n"
+	.string "Stop moving like a side man!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_NolandImFactoryHead:
-	.string "Hey, my name's NOLAND!\n"
-	.string "I'm basically in charge of this place,\l"
-	.string "which is why I'm the FACTORY HEAD!\p"
-	.string "I had a look at your Battle Swap data.\p"
-	.string "You seem to have the right idea,\n"
-	.string "but you're still square in your head!\p"
-	.string "Listen up, okay? Knowledge isn't only\n"
-	.string "about reading books or doing desk work.\p"
-	.string "Just doing that sort of thing…\n"
-	.string "It may as well be useless!\p"
-	.string "You have to experience things with\n"
-	.string "your heart and your body, understand?\p"
-	.string "I'll take you on under the same\n"
-	.string "conditions as you.\p"
-	.string "I'll be using rental POKéMON, too!$"
+	.string "Wagwan, names NOLAND!\n"
+	.string "I’m the Top Boy round here, the big\l"
+	.string "man in charge of the Factory.\p"
+	.string "I had a look at your swap data.\p"
+	.string "You’ve got a decent motive going,\n"
+	.string "but your head’s still bare bookey!\p"
+	.string "Listen, yeah? Knowledge ain’t just\n"
+	.string "about being a nerd and reading books.\p"
+	.string "That’s dead. If you don't use it on\n"
+	.string "road, it’s basically useless!\p"
+	.string "Pattern up, big man. You gotta feel\n"
+	.string "the battle in your heart and body.\p"
+	.string "I’m jumping in with rentals too,\n"
+	.string "same conditions as you.\p"
+	.string "Let's see if you're a real one!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_ShakeOutKnowledgeBringItOn:
-	.string "Shake out every last bit of your\n"
-	.string "knowledge and bring it on!$"
+	.string "Empty your pockets of everything you\n"
+	.string "know and bring it on! Mad ting!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_NolandLetsSeeFrontierPass:
-	.string "NOLAND: Smart going!\n"
-	.string "Let's see your FRONTIER PASS.$"
+	.string "NOLAND: Rate that highly!\n"
+	.string "Let’s see that Frontier Pass then.$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_ReceivedKnowledgeSymbol:
-	.string "The Knowledge Symbol was embossed\n"
-	.string "on the FRONTIER PASS!$"
+	.string "The Knowledge Symbol was slapped\n"
+	.string "onto the FRONTIER PASS!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_NextTimeNoHoldsBarred:
-	.string "Heh…\n"
-	.string "You're a pretty bright spark…\p"
-	.string "Next time, I'll come after you hard.\n"
-	.string "No holds barred, understand?\p"
-	.string "You keep up your studies!$"
+	.string "Rah…\n"
+	.string "You’re a proper bright spark, truss.\p"
+	.string "Next time, I’m coming for you serious.\n"
+	.string "No holding back, understand?\p"
+	.string "Keep on the grind, yute!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_HarderLookThanLastTime:
-	.string "NOLAND: Hey, hey! How's it going?\n"
-	.string "You keeping up with your studies?\p"
-	.string "…Oh?\p"
-	.string "You've taken on a harder look than\n"
-	.string "the last time I saw you.\p"
-	.string "Now, this should be fun!\n"
-	.string "I'm getting excited, hey!$"
+	.string "NOLAND: Wagwan! How’s it going?\n"
+	.string "You still on your grind?\p"
+	.string "…Wait.\p"
+	.string "You’re looking way more serious\n"
+	.string "than the last time I saw you.\p"
+	.string "Safe! This motive’s gonna be a\n"
+	.string "mad ting! I’m bare gassed!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_AllRightBringItOn:
-	.string "All right!\n"
+	.string "Say less!\n"
 	.string "Bring it on!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_OutOfMyLeagueLetsSeePass:
 	.string "NOLAND: What the…\n"
-	.string "You're getting out of my league!\p"
-	.string "Sheesh!\n"
-	.string "Let's see that FRONTIER PASS!$"
+	.string "You’re getting out of my league!\p"
+	.string "Absolute violation!\n"
+	.string "Gimme that Frontier Pass!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_KnowledgeSymbolTookGoldenShine:
 	.string "The Knowledge Symbol took on\n"
-	.string "a golden shine!$"
+	.string "a proper golden shine! Leng!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_LastTimeILoseToYou:
 	.string "Pfft, man!\p"
-	.string "That's absolutely the last time\n"
-	.string "I lose to you!\p"
-	.string "We have to do this again, hey?$"
+	.string "That is the LAST time I lose to a\n"
+	.string "wasteman like you!\p"
+	.string "We have to link up again, yeah?$"
 

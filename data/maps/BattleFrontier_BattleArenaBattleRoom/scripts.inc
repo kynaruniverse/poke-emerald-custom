@@ -1,7 +1,3 @@
-@ On this map the player will automatically walk into the room, but the camera is supposed to remain still.
-@ To do this GF sets the player (LOCALID_PLAYER) invisible and creates a fake player object (LOCALID_ARENA_BATTLE_PLAYER).
-@ The graphics of this fake player object are represented with VAR_OBJ_GFX_ID_1.
-@ The graphics of the opponent are represented with VAR_OBJ_GFX_ID_0, which will ultimately be set by tower_setopponent.
 BattleFrontier_BattleArenaBattleRoom_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, BattleFrontier_BattleArenaBattleRoom_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattleArenaBattleRoom_OnFrame
@@ -483,147 +479,151 @@ BattleFrontier_BattleArenaBattleRoom_Movement_GretaWalkBackToCenter:
 	walk_in_place_faster_left
 	step_end
 
-BattleFrontier_BattleArenaBattleRoom_Text_PlayerStepForward:
-	.string "REFEREE: TRAINER {PLAYER}!\n"
-	.string "Step forward, please!$"
+BattleFrontier_BattleArenaBattleRoom_Text_PlayerStepForward::
+	.string "ANNOUNCER: REPRESENTING THE ENDS,\n"
+	.string "{PLAYER}! Step into the ring!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_OpponentStepForward:
-	.string "REFEREE: TRAINER {STR_VAR_1}!\n"
-	.string "Step forward, please!$"
+BattleFrontier_BattleArenaBattleRoom_Text_OpponentStepForward::
+	.string "ANNOUNCER: CHALLENGER {STR_VAR_1}!\n"
+	.string "Step into the ring!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_SetKOTourneyBegin:
-	.string "REFEREE: Set KO Tourney!\n"
-	.string "Begin!$"
+BattleFrontier_BattleArenaBattleRoom_Text_SetKOTourneyBegin::
+	.string "ANNOUNCER: Set KO Rules in effect!\n"
+	.string "Let’s get it!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsPlayer:
-	.string "REFEREE: The winner is {PLAYER}!$"
+BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsPlayer::
+	.string "ANNOUNCER: IT’S OVER! {PLAYER} is\n"
+	.string "the last one standing!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsOpponent:
-	.string "REFEREE: The winner is {STR_VAR_1}!$"
+BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsOpponent::
+	.string "ANNOUNCER: {STR_VAR_1} wins by\n"
+	.string "total knockout!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_MonsWillBeRestored:
-	.string "Your POKéMON will be restored to\n"
-	.string "full health.$"
+BattleFrontier_BattleArenaBattleRoom_Text_MonsWillBeRestored::
+	.string "Let’s get your squad patched up before\n"
+	.string "the next set.$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor2ndOpponent:
-	.string "Next up, your second opponent!\n"
-	.string "Are you ready to move on?$"
+BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor2ndOpponent::
+	.string "Round Two coming up! You ready to\n"
+	.string "keep the momentum going?$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor3rdOpponent:
-	.string "Next up, your third opponent!\n"
-	.string "Are you ready to move on?$"
+BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor3rdOpponent::
+	.string "Round Three! You still got the\n"
+	.string "minerals for this?$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor4thOpponent:
-	.string "Next up, your fourth opponent!\n"
-	.string "Are you ready to move on?$"
+BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor4thOpponent::
+	.string "Round Four! The heat is rising.\n"
+	.string "You ready to go again?$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor5thOpponent:
-	.string "Next up, your fifth opponent!\n"
-	.string "Are you ready to move on?$"
+BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor5thOpponent::
+	.string "Round Five! You’re on a roll.\n"
+	.string "Don't stop now!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor6thOpponent:
-	.string "Next up, your sixth opponent!\n"
-	.string "Are you ready to move on?$"
+BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor6thOpponent::
+	.string "Round Six! Almost at the peak.\n"
+	.string "You ready to secure the bag?$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor7thOpponent:
-	.string "Next up, your seventh opponent!\n"
-	.string "Are you ready to move on?$"
+BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor7thOpponent::
+	.string "The Grand Finale! One more win to\n"
+	.string "clear the block. You ready?$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_SaveAndShutDown:
-	.string "Would you like to save the game and\n"
-	.string "shut down now?$"
+BattleFrontier_BattleArenaBattleRoom_Text_SaveAndShutDown::
+	.string "You want to clock out and save\n"
+	.string "your progress here?$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_RetireFromChallenge:
-	.string "Would you like to retire from your\n"
-	.string "Set KO Tourney challenge?$"
+BattleFrontier_BattleArenaBattleRoom_Text_RetireFromChallenge::
+	.string "You really throwing in the towel on\n"
+	.string "the KO Tourney?$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_SavingPleaseWait:
-	.string "I am saving your game data.\n"
-	.string "Please wait.$"
+BattleFrontier_BattleArenaBattleRoom_Text_SavingPleaseWait::
+	.string "Backing up your data now.\n"
+	.string "Don't touch nothing.$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_RecordLastBattle:
-	.string "Would you like to record your last\n"
-	.string "battle on your FRONTIER PASS?$"
+BattleFrontier_BattleArenaBattleRoom_Text_RecordLastBattle::
+	.string "That was a madness! Want to save the\n"
+	.string "footage to your FRONTIER PASS?$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_NowFaceTycoon:
-	.string "My dear challenger!\p"
-	.string "Your skill level is truly astounding!\p"
-	.string "We now would like you to face our\n"
-	.string "leader, the ARENA TYCOON!$"
+BattleFrontier_BattleArenaBattleRoom_Text_NowFaceTycoon::
+	.string "Yo, challenger!\p"
+	.string "Your levels are actually mental!\p"
+	.string "The crowd wants more. It’s time to face\n"
+	.string "the Boss—the ARENA TYCOON!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_PreparedForTycoon:
-	.string "A battle with the ARENA TYCOON!\n"
-	.string "Are you prepared?$"
+BattleFrontier_BattleArenaBattleRoom_Text_PreparedForTycoon::
+	.string "The TYCOON is waiting in the wings.\n"
+	.string "You ready for the smoke?$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_MakeWayForGreta:
-	.string "REFEREE: The ARENA TYCOON!\n"
-	.string "Make way for GRETA!$"
+BattleFrontier_BattleArenaBattleRoom_Text_MakeWayForGreta::
+	.string "ANNOUNCER: SHE’S HERE! THE QUEEN\n"
+	.string "OF THE PIT! CLEAR OUT FOR GRETA!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_GretaYoureChallenger:
-	.string "GRETA: Hey!\n"
-	.string "Howdy!\p"
-	.string "…Wait, are you the challenger?$"
+BattleFrontier_BattleArenaBattleRoom_Text_GretaYoureChallenger::
+	.string "GRETA: Safe!\n"
+	.string "What’s the motive?\p"
+	.string "Wait... you’re the one who’s been\n"
+	.string "running through my arena?$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_IsThatRight:
-	.string "Is that right? Hmm…\n"
-	.string "Hmhm…$"
+BattleFrontier_BattleArenaBattleRoom_Text_IsThatRight::
+	.string "You? For real? Hmm...\n"
+	.string "Let me look at you...$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_YouLookWeakTakeThingsEasy:
-	.string "I don't know how to say it, but…\n"
-	.string "To put it bluntly, you look pretty weak.\l"
-	.string "Are you sure you're up for me?\p"
-	.string "Hmm…\p"
-	.string "Well, all right!\n"
-	.string "We'll take things easy to start with!$"
+BattleFrontier_BattleArenaBattleRoom_Text_YouLookWeakTakeThingsEasy::
+	.string "I’m gonna keep it 100 with you...\n"
+	.string "You look proper light. You sure you\l"
+	.string "want to step into the ring with me?\p"
+	.string "Hmm...\p"
+	.string "Whatever! I’ll go easy on you for the\n"
+	.string "first couple minutes!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_IgniteMyPassionForBattle:
-	.string "Okay! Let's see you ignite my passion\n"
-	.string "for battle!$"
+BattleFrontier_BattleArenaBattleRoom_Text_IgniteMyPassionForBattle::
+	.string "Show me you’ve got that fire! Let’s\n"
+	.string "give the crowd a show!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_GretaYoureToughAfterAll:
-	.string "GRETA: Ow, wait a second!\n"
-	.string "You are tough after all!\p"
-	.string "I like you!\n"
-	.string "Let's see your FRONTIER PASS.$"
+BattleFrontier_BattleArenaBattleRoom_Text_GretaYoureToughAfterAll::
+	.string "GRETA: Woah, hold up!\n"
+	.string "You’re actually heavy with it!\p"
+	.string "I like your energy! Pass me that\n"
+	.string "FRONTIER PASS, let me certify you.$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_ReceivedGutsSymbol:
-	.string "The Guts Symbol was embossed on\n"
+BattleFrontier_BattleArenaBattleRoom_Text_ReceivedGutsSymbol::
+	.string "The Guts Symbol was stamped onto\n"
 	.string "the FRONTIER PASS!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_GoingToBeFunNextTime:
-	.string "Hmm…\p"
-	.string "It's going to be fun the next time!\n"
-	.string "I'm looking forward to it!$"
+BattleFrontier_BattleArenaBattleRoom_Text_GoingToBeFunNextTime::
+	.string "Safe...\p"
+	.string "Next time we clash, it’s gonna be even\n"
+	.string "louder! Can’t wait!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_GretaLookingForwardToSeeingAgain:
-	.string "GRETA: Hey! Howdy!\n"
-	.string "You finally won your way up to me!\p"
-	.string "I was getting worried waiting for you!\n"
-	.string "I was really looking forward to seeing\l"
-	.string "you again!$"
+BattleFrontier_BattleArenaBattleRoom_Text_GretaLookingForwardToSeeingAgain::
+	.string "GRETA: Yo! Look who finally made it\n"
+	.string "back to the top tier!\p"
+	.string "I was getting bare bored waiting for a\n"
+	.string "real fight. I’ve been itching for this\l"
+	.string "rematch!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_SoAreYouReady:
+BattleFrontier_BattleArenaBattleRoom_Text_SoAreYouReady::
 	.string "… … …\n"
-	.string "So, are you ready?$"
+	.string "So, you ready to bang?$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_WontAllowHalfheartedEffort:
-	.string "I won't allow a halfhearted effort!\n"
-	.string "Be ready for a thrashing!$"
+BattleFrontier_BattleArenaBattleRoom_Text_WontAllowHalfheartedEffort::
+	.string "I ain't accepting no weak efforts today!\n"
+	.string "Get ready for a proper shellacking!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_LetsGetThisStarted:
-	.string "Come on, REFEREE!\n"
-	.string "Let's get this started!$"
+BattleFrontier_BattleArenaBattleRoom_Text_LetsGetThisStarted::
+	.string "Come on, Ref!\n"
+	.string "Ring the bell already!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_GretaBlownAway:
-	.string "GRETA: Gaaah! Blown away!\n"
-	.string "Let's see your FRONTIER PASS!$"
+BattleFrontier_BattleArenaBattleRoom_Text_GretaBlownAway::
+	.string "GRETA: Rah! Straight up clinical!\n"
+	.string "Hand over that PASS!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_GutsSymbolTookGoldenShine:
-	.string "The Guts Symbol took on\n"
-	.string "a golden shine!$"
+BattleFrontier_BattleArenaBattleRoom_Text_GutsSymbolTookGoldenShine::
+	.string "The Guts Symbol is glowing gold!\n"
+	.string "The drip is immaculate!$"
 
-BattleFrontier_BattleArenaBattleRoom_Text_IfWeBattleAgainWontLose:
+BattleFrontier_BattleArenaBattleRoom_Text_IfWeBattleAgainWontLose::
 	.string "Arrrgh!\n"
-	.string "This is so infuriating!\p"
-	.string "If we ever battle again, I won't lose!\n"
-	.string "Don't you forget it! Bye-bye!$"
+	.string "I am proper fuming right now!\p"
+	.string "If we ever go again, I’m taking the\n"
+	.string "win back! Don't get it twisted! Peace!$"
+

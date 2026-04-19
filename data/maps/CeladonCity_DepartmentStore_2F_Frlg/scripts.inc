@@ -16,10 +16,10 @@ CeladonCity_DepartmentStore_2F_EventScript_FloorSign::
 CeladonCity_DepartmentStore_2F_EventScript_ClerkItems::
 	lock
 	faceplayer
-	message gText_HowMayIServeYou
+	message CeladonCity_DepartmentStore_2F_Text_ShopWelcome
 	waitmessage
 	pokemart CeladonCity_DepartmentStore_2F_Items
-	msgbox gText_PleaseComeAgain
+	msgbox CeladonCity_DepartmentStore_2F_Text_ShopGoodbye
 	release
 	end
 
@@ -41,10 +41,10 @@ CeladonCity_DepartmentStore_2F_Items::
 CeladonCity_DepartmentStore_2F_EventScript_ClerkTMs::
 	lock
 	faceplayer
-	message gText_HowMayIServeYou
+	message CeladonCity_DepartmentStore_2F_Text_ShopWelcome
 	waitmessage
 	pokemart CeladonCity_DepartmentStore_2F_TMs
-	msgbox gText_PleaseComeAgain
+	msgbox CeladonCity_DepartmentStore_2F_Text_ShopGoodbye
 	release
 	end
 
@@ -60,22 +60,36 @@ CeladonCity_DepartmentStore_2F_TMs::
 	release
 	end
 
+CeladonCity_DepartmentStore_2F_Text_ShopWelcome::
+	.string "Safe, what you looking for? Man’s\n"
+	.string "got the piff supplies on deck.$"
+
+CeladonCity_DepartmentStore_2F_Text_ShopGoodbye::
+	.string "Safe. Don't be a stranger in these\n"
+	.string "bits, yeah?$"
+
 CeladonCity_DepartmentStore_2F_Text_SuperRepelMorePowerfulRepel::
-	.string "SUPER REPEL keeps weak POKéMON at\n"
-	.string "bay…\p"
-	.string "Hmm, it's a more powerful REPEL.$"
+	.string "This SUPER REPEL is peak, fam.\n"
+	.string "Keeps the dead-out mons away so\l"
+	.string "you can walk the ends in peace.\p"
+	.string "Trust me, it’s bare stronger than\n"
+	.string "that basic stuff.$"
 
 CeladonCity_DepartmentStore_2F_Text_BuyReviveForLongOutings::
-	.string "For long outings, you should buy\n"
-	.string "REVIVE.$"
+	.string "If you’re heading out to the long\n"
+	.string "grass, you need that REVIVE.\p"
+	.string "Don't let your team get caught\n"
+	.string "slipping, get me?$"
 
 CeladonCity_DepartmentStore_2F_Text_FloorSign::
-	.string "Top-Grade Items for TRAINERS!\p"
-	.string "2F: TRAINER'S MARKET$"
+	.string "Only the finest gear for the mandem!\p"
+	.string "2F: TRAINER'S MARKET - NO PAGANS$"
 
 CeladonCity_DepartmentStore_2F_Text_LanceComesToBuyCapes::
-	.string "We have a customer, LANCE, who\n"
-	.string "occasionally comes.\p"
-	.string "He always buys capes.\p"
-	.string "I wonder… Does he have many\n"
-	.string "identical capes at home?$"
+	.string "We got this bredrin LANCE who\n"
+	.string "steps through sometimes.\p"
+	.string "Man only ever buys capes.\p"
+	.string "I’m thinking... does he have a\n"
+	.string "hundred of the same fit at home?\l"
+	.string "That’s a mad style, still.$"
+

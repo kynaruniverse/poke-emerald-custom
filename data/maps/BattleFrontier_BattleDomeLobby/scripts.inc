@@ -51,6 +51,7 @@ BattleFrontier_BattleDomeLobby_EventScript_WonChallenge::
 
 BattleFrontier_BattleDomeLobby_EventScript_DefeatedAce::
 	msgbox BattleFrontier_BattleDomeLobby_Text_CongratsDefeatedTucker, MSGBOX_DEFAULT
+
 BattleFrontier_BattleDomeLobby_EventScript_GiveBattlePoints::
 	msgbox BattleFrontier_BattleDomeLobby_Text_AwardTheseBattlePoints, MSGBOX_DEFAULT
 	frontier_givepoints
@@ -81,6 +82,7 @@ BattleFrontier_BattleDomeLobby_EventScript_LostChallenge::
 	special LoadPlayerParty
 	special HealPlayerParty
 	callnative UpdateFollowingPokemon
+
 BattleFrontier_BattleDomeLobby_EventScript_AskRecordBattle::
 	dome_save 0
 	playse SE_SAVE
@@ -97,6 +99,7 @@ BattleFrontier_BattleDomeLobby_EventScript_AskRecordBattle::
 
 BattleFrontier_BattleDomeLobby_EventScript_RecordBattle::
 	call BattleFrontier_EventScript_SaveBattle
+
 BattleFrontier_BattleDomeLobby_EventScript_EndChallenge::
 	msgbox BattleFrontier_BattleDomeLobby_Text_HopeToSeeYouAgain, MSGBOX_DEFAULT
 	closemessage
@@ -136,6 +139,7 @@ BattleFrontier_BattleDomeLobby_EventScript_AttendantWelcome::
 	special SavePlayerParty
 	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES, BattleFrontier_BattleDomeLobby_EventScript_WelcomeSingles
 	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES, BattleFrontier_BattleDomeLobby_EventScript_WelcomeDoubles
+
 BattleFrontier_BattleDomeLobby_EventScript_AskTakeChallenge::
 	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES, BattleFrontier_BattleDomeLobby_EventScript_TakeSinglesChallenge
 	call_if_eq VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES, BattleFrontier_BattleDomeLobby_EventScript_TakeDoublesChallenge
@@ -185,6 +189,7 @@ BattleFrontier_BattleDomeLobby_EventScript_SaveBeforeChallenge::
 	setvar VAR_TEMP_CHALLENGE_STATUS, 255
 	goto_if_eq VAR_RESULT, 0, BattleFrontier_BattleDomeLobby_EventScript_CancelChallengeSaveFailed
 	dome_inittrainers
+
 BattleFrontier_BattleDomeLobby_EventScript_EnterChallenge::
 	special SavePlayerParty
 	frontier_setpartyorder FRONTIER_PARTY_SIZE
@@ -227,8 +232,10 @@ BattleFrontier_BattleDomeLobby_EventScript_CancelChallengeSaveFailed::
 BattleFrontier_BattleDomeLobby_EventScript_LoadPartyCancelChallenge::
 	special LoadPlayerParty
 	callnative UpdateFollowingPokemon
+
 BattleFrontier_BattleDomeLobby_EventScript_CancelChallenge::
 	msgbox BattleFrontier_BattleDomeLobby_Text_HopeToSeeYouAgain, MSGBOX_DEFAULT
+
 BattleFrontier_BattleDomeLobby_EventScript_EndCancelChallenge::
 	release
 	end
@@ -385,17 +392,14 @@ BattleFrontier_BattleDomeLobby_EventScript_Man::
 	msgbox BattleFrontier_BattleDomeLobby_Text_NeedToCheckOpponentCarefully, MSGBOX_NPC
 	end
 
-@ A few OutsideWest event scripts are inserted here instead, two of which are unused
 BattleFrontier_OutsideWest_EventScript_Man3::
 	msgbox BattleFrontier_OutsideWest_Text_LongDreamedAboutBattleFrontier, MSGBOX_NPC
 	end
 
-@ Unused
 BattleFrontier_OutsideWest_EventScript_BattleDomeSign2::
 	msgbox BattleFrontier_OutsideWest_Text_BattleDomeSign2, MSGBOX_NPC
 	end
 
-@ Unused
 BattleFrontier_OutsideWest_EventScript_UnderConstructionSign::
 	msgbox BattleFrontier_OutsideWest_Text_QuestionMarkUnderConstruction, MSGBOX_NPC
 	end
@@ -519,21 +523,9 @@ BattleFrontier_BattleDomeLobby_Text_CongratsForWinningTourney:
 	.string "Congratulations for winning\n"
 	.string "your Battle Tournament!$"
 
-@ Unused
-BattleFrontier_BattleDomeLobby_Text_HereIsYourPrize:
-	.string "Here is your prize for your Battle\n"
-	.string "Tournament victory.$"
-
-@ Used by Verdanturf Tent
 BattleFrontier_BattleDomeLobby_Text_ReceivedPrize:
 	.string "{PLAYER} received the prize\n"
 	.string "{STR_VAR_1}.$"
-
-@ Unused
-BattleFrontier_BattleDomeLobby_Text_BagFullMakeRoom:
-	.string "Oh, your BAG appears to be full.\p"
-	.string "Please make room in your BAG, then come\n"
-	.string "see me.$"
 
 BattleFrontier_BattleDomeLobby_Text_ThankYouForPlaying:
 	.string "Thank you for playing!$"
@@ -609,12 +601,10 @@ BattleFrontier_OutsideWest_Text_LongDreamedAboutBattleFrontier:
 	.string "The BATTLE FRONTIER…\n"
 	.string "I've long dreamed about a place like it.$"
 
-@ Functionally unused
 BattleFrontier_OutsideWest_Text_BattleDomeSign2:
 	.string "The BATTLE DOME\n"
 	.string "Become the Unbeatable Superstar!$"
 
-@ Functionally unused
 BattleFrontier_OutsideWest_Text_QuestionMarkUnderConstruction:
 	.string "The ??????\n"
 	.string "Under Construction!$"
@@ -685,3 +675,4 @@ BattleFrontier_BattleDomeLobby_Text_ExplainDoubleKORules:
 	.string "time--a double KO--in a tournament\l"
 	.string "match, the REFEREES will review\l"
 	.string "the match and declare the winner.$"
+

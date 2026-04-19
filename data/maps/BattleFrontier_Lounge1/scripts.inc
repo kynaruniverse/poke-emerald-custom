@@ -151,108 +151,108 @@ BattleFrontier_Lounge1_EventScript_Boy2::
 	end
 
 BattleFrontier_Lounge1_Text_PokemonBreederIntro:
-	.string "For 70 years I have raised POKéMON!\n"
-	.string "I am the man they revere as\l"
-	.string "the legendary top POKéMON BREEDER!\p"
-	.string "If you ever become as seasoned as me,\n"
-	.string "you'll see the abilities of POKéMON\l"
-	.string "at a glance.\p"
-	.string "You're a TRAINER. Doesn't it interest\n"
-	.string "you to know your own POKéMON's\l"
-	.string "abilities?\p"
-	.string "Here!\n"
-	.string "Let's have a look at your POKéMON!$"
+	.string "Listen, g, I’ve been in this game\n"
+	.string "for 70 years! I’m the one they call\l"
+	.string "the legend, the elite BREEDER!\p"
+	.string "When you’ve put in the work like me,\n"
+	.string "you can see a POKéMON’s potential\l"
+	.string "straight away, no capping.\p"
+	.string "You’re a TRAINER. You must want\n"
+	.string "to know if your team is built\l"
+	.string "different, yeah?\p"
+	.string "Come on then!\n"
+	.string "Let me see what you’re working with!$"
 
 BattleFrontier_Lounge1_Text_AverageAbility:
 	.string "…Hmm…\p"
-	.string "This one, overall, I would describe\n"
-	.string "as being of average ability.$"
+	.string "This one, overall? It’s just mid.\n"
+	.string "Proper average, if I’m honest.$"
 
 BattleFrontier_Lounge1_Text_BetterThanAverageAbility:
 	.string "…Hmm…\p"
-	.string "This one, overall, I would describe as\n"
-	.string "having better-than-average ability.$"
+	.string "This one, overall, looks decent.\n"
+	.string "Bit better than your average set.$"
 
 BattleFrontier_Lounge1_Text_ImpressiveAbility:
 	.string "…Hmm…\p"
-	.string "This one, overall, I would say is\n"
-	.string "quite impressive in ability!$"
+	.string "This one, overall, is actually\n"
+	.string "proper impressive! I’m feeling it.$"
 
 BattleFrontier_Lounge1_Text_OutstandingAbility:
 	.string "…Hmm…\p"
-	.string "This one, overall, I would say is\n"
-	.string "wonderfully outstanding in ability!$"
+	.string "Safe! This one, overall, is\n"
+	.string "outstanding. Built different!$"
 
 BattleFrontier_Lounge1_Text_BestAspectHP:
-	.string "Incidentally, the best aspect of it,\n"
-	.string "I would say, is its HP…$"
+	.string "The best part about it, though,\n"
+	.string "has to be its HP…$"
 
 BattleFrontier_Lounge1_Text_BestAspectAtk:
-	.string "Incidentally, the best aspect of it,\n"
-	.string "I would say, is its ATTACK…$"
+	.string "The best part about it, though,\n"
+	.string "has to be its ATTACK…$"
 
 BattleFrontier_Lounge1_Text_BestAspectDef:
-	.string "Incidentally, the best aspect of it,\n"
-	.string "I would say, is its DEFENSE…$"
+	.string "The best part about it, though,\n"
+	.string "has to be its DEFENSE…$"
 
 BattleFrontier_Lounge1_Text_BestAspectSpAtk:
-	.string "Incidentally, the best aspect of it,\n"
-	.string "I would say, is its SPECIAL ATTACK…$"
+	.string "The best part about it, though,\n"
+	.string "has to be its SP. ATK…$"
 
 BattleFrontier_Lounge1_Text_BestAspectSpDef:
-	.string "Incidentally, the best aspect of it,\n"
-	.string "I would say, is its SPECIAL DEFENSE…$"
+	.string "The best part about it, though,\n"
+	.string "has to be its SP. DEF…$"
 
 BattleFrontier_Lounge1_Text_BestAspectSpeed:
-	.string "Incidentally, the best aspect of it,\n"
-	.string "I would say, is its SPEED…$"
+	.string "The best part about it, though,\n"
+	.string "has to be its SPEED…$"
 
 BattleFrontier_Lounge1_Text_StatRelativelyGood:
 	.string "That stat is relatively good.\n"
-	.string "…Hm… That's how I call it.$"
+	.string "Trust me, that’s my word.$"
 
 BattleFrontier_Lounge1_Text_StatImpressive:
-	.string "That stat is quite impressive.\n"
-	.string "…Hm… That's how I call it.$"
+	.string "That stat is proper impressive.\n"
+	.string "Trust me, that’s my word.$"
 
 BattleFrontier_Lounge1_Text_StatOutstanding:
-	.string "That stat is outstanding!\n"
-	.string "…Hm… That's how I call it.$"
+	.string "That stat is outstanding, fam!\n"
+	.string "Trust me, that’s my word.$"
 
 BattleFrontier_Lounge1_Text_StatFlawless:
-	.string "It's flawless! A thing of perfection!\n"
-	.string "…Hm… That's how I call it.$"
+	.string "It’s flawless! Absolute perfection!\n"
+	.string "No cap, that’s my word.$"
 
 BattleFrontier_Lounge1_Text_NoTimeForMyAdvice:
 	.string "What?\n"
-	.string "You have no time for my advice?\p"
-	.string "You should always be eager to learn\n"
-	.string "from the experiences of your elders!$"
+	.string "You’ve got no time for my gems?\p"
+	.string "You should be eager to learn from\n"
+	.string "an OG who’s seen it all!$"
 
 @ Unused
 BattleFrontier_Lounge1_Text_HaveBusinessNeedsTending:
-	.string "Yes, what is it now?\p"
-	.string "I have business that needs tending!\n"
-	.string "Save it for next time!$"
+	.string "Yeah, what now?\p"
+	.string "I’ve got moves to make!\n"
+	.string "Save it for another time!$"
 
 BattleFrontier_Lounge1_Text_LetsLookAtYourPokemon:
-	.string "Ah, youngster! Do your POKéMON's\n"
-	.string "abilities intrigue you?\p"
-	.string "Here, here!\n"
-	.string "Let's have a look at your POKéMON!$"
+	.string "Ayy, youngster! You curious if your\n"
+	.string "POKéMON are elite or what?\p"
+	.string "Come here then!\n"
+	.string "Let me see what you’re working with!$"
 
 BattleFrontier_Lounge1_Text_EvenICantTell:
-	.string "An expert I am, but even I can't tell\n"
-	.string "anything about an unhatched POKéMON!\p"
+	.string "Look, I’m an expert, but even I can’t\n"
+	.string "tell if an egg is gonna be elite!\p"
 	.string "Show me a POKéMON!\n"
-	.string "A POKéMON is what I need to see!$"
+	.string "I need to see the real thing!$"
 
 BattleFrontier_Lounge1_Text_SaidMyMonIsOutstanding:
 	.string "He said my POKéMON is outstanding!\n"
-	.string "I'm glad I raised it carefully!$"
+	.string "Glad I put in the work to raise it!$"
 
-BattleFrontier_Lounge1_Text_DidntDoAnythingSpecialRaisingIt:
+BattleFrontier_Lounge1_Text_DidntDoAnythingSpecialRaisingit:
 	.string "He said my POKéMON is outstanding!\n"
-	.string "But I didn't do anything special\l"
-	.string "raising it…$"
+	.string "But I didn't even do anything\l"
+	.string "special. Just natural talent, innit?$"
 

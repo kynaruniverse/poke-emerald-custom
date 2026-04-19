@@ -20,7 +20,6 @@ BattleFrontier_BattlePalaceBattleRoom_EventScript_SetPlayerGfx::
 	goto_if_eq VAR_RESULT, FEMALE, BattleFrontier_BattlePalaceBattleRoom_EventScript_SetPlayerGfxFemale
 	return
 
-@ The opponent's gfx are set to the players by default
 BattleFrontier_BattlePalaceBattleRoom_EventScript_SetPlayerGfxMale::
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
@@ -370,25 +369,6 @@ BattleFrontier_BattlePalaceBattleRoom_Movement_FaceDown:
 	face_down
 	step_end
 
-BattleFrontier_BattlePalaceBattleRoom_Movement_UnusedOpponentEnter1:
-	set_visible
-	walk_slow_down
-	walk_slow_down
-	face_left
-	step_end
-
-BattleFrontier_BattlePalaceBattleRoom_Movement_UnusedOpponentEnter2:
-	set_visible
-	walk_slow_down
-	step_end
-
-BattleFrontier_BattlePalaceBattleRoom_Movement_UnusedOpponentEnter3:
-	walk_slow_down
-	walk_slow_down
-	walk_slow_down
-	face_left
-	step_end
-
 BattleFrontier_BattlePalaceBattleRoom_EventScript_WarpToLobby::
 	copyvar VAR_RESULT, VAR_FRONTIER_BATTLE_MODE
 	goto_if_eq VAR_RESULT, FRONTIER_MODE_DOUBLES, BattleFrontier_BattlePalaceBattleRoom_EventScript_WarpToLobbyDoubles
@@ -441,110 +421,109 @@ BattleFrontier_BattlePalaceBattleRoom_Movement_SpenserEnter:
 	step_end
 
 BattleFrontier_BattlePalaceBattleRoom_Text_LetMeRestoreYourMons:
-	.string "Excellent…\n"
-	.string "Let me restore your POKéMON.$"
+	.string "Excellent motive…\n"
+	.string "Lemme restore your team, truss.$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor2ndOpponent:
-	.string "The 2nd opponent is next.\n"
-	.string "Are you prepared?$"
+	.string "The 2nd opponent is up next.\n"
+	.string "You ready for the violation?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor3rdOpponent:
-	.string "The 3rd opponent is next.\n"
-	.string "Are you prepared?$"
+	.string "The 3rd opponent is coming.\n"
+	.string "Are you still feeling ready?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor4thOpponent:
 	.string "The 4th opponent is next.\n"
-	.string "Are you prepared?$"
+	.string "Pattern up. You ready?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor5thOpponent:
 	.string "The 5th opponent is next.\n"
-	.string "Are you prepared?$"
+	.string "You ready to hold it down?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor6thOpponent:
 	.string "The 6th opponent is next.\n"
-	.string "Are you prepared?$"
+	.string "Almost at the end. You ready?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor7thOpponent:
 	.string "The 7th opponent is next.\n"
-	.string "Are you prepared?$"
+	.string "The final motive. You ready?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SaveAndQuitGame:
-	.string "Would you like to save and quit\n"
-	.string "the game?$"
+	.string "You tryna save and low it for now?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_WishToQuitChallenge:
-	.string "Do you wish to quit your challenge?$"
+	.string "You tryna quit the challenge? For real?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SavingData:
 	.string "Saving the data.\n"
-	.string "Have patience…$"
+	.string "Hold tight for a sec…$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_RecordLastMatch:
-	.string "Do you wish to record your latest\n"
-	.string "match on your FRONTIER PASS?$"
+	.string "You tryna record that last match\n"
+	.string "on your FRONTIER PASS?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ChallengingPalaceMaven:
 	.string "And now…\p"
-	.string "By winning consistently, you have\n"
+	.string "By winning consistently, you’ve\n"
 	.string "earned the privilege of challenging\l"
-	.string "our master, the PALACE MAVEN…$"
+	.string "the big boss, the PALACE MAVEN…$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ReadyForPalaceMaven:
-	.string "I shall send for the PALACE MAVEN.\n"
-	.string "Are you ready?$"
+	.string "I’ll send for the PALACE MAVEN.\n"
+	.string "You ready for the boss?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_AnnounceArrivalOfSpenser:
-	.string "Let great fanfare announce the arrival\n"
+	.string "Let the fanfare announce the arrival\n"
 	.string "of the PALACE MAVEN, SPENSER!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserFirstIntro:
 	.string "SPENSER: My physical being is with\n"
-	.string "POKéMON always!\p"
+	.string "POKéMON always, truss!\p"
 	.string "My heart beats as one with\n"
 	.string "POKéMON always!\p"
 	.string "Young one of a TRAINER!\n"
-	.string "Do you believe in your POKéMON?\p"
+	.string "Do you believe in your team?\p"
 	.string "Can you believe them through\n"
 	.string "and through?\p"
 	.string "If your bonds of trust are frail,\n"
-	.string "you will never beat my brethren!$"
+	.string "you’ll never beat my brethren!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ProveYourBondWithMons:
-	.string "The bond you share with your POKéMON!\n"
-	.string "Prove it to me here!$"
+	.string "The bond you share with your team!\n"
+	.string "Prove it to me right here!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserPostSilverBattle:
 	.string "SPENSER: Gwahahah!\p"
 	.string "Hah, you never fell for my bluster!\n"
-	.string "Sorry for trying that stunt!\p"
+	.string "Sorry for trying that stunt, fam!\p"
 	.string "Here!\n"
 	.string "Bring me the thing!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_LetsSeeFrontierPass:
 	.string "My, my, if only you could maintain that\n"
-	.string "facade of distinguished authority…\p"
+	.string "look of authority…\p"
 	.string "Here!\n"
-	.string "Let's see your FRONTIER PASS!$"
+	.string "Let’s see your FRONTIER PASS!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ReceivedSpiritsSymbol:
 	.string "The Spirits Symbol was embossed on\n"
 	.string "the FRONTIER PASS!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserAwaitNextTime:
-	.string "SPENSER: Your POKéMON's eyes are \n"
+	.string "SPENSER: Your POKéMON’s eyes are \n"
 	.string "truly clear and unclouded.\p"
-	.string "I will eagerly await the next\n"
-	.string "opportunity to see you.$"
+	.string "I’ll be waiting for the next\n"
+	.string "time we link up.$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserThisTimeWontHoldBack:
 	.string "SPENSER: Gwahahah!\n"
-	.string "You've battled your way up again?\p"
+	.string "You’ve battled your way up again?\p"
 	.string "You must have developed a truly\n"
-	.string "formidable bond with your POKéMON.\p"
+	.string "solid bond with your team.\p"
 	.string "So be it!\p"
-	.string "This time, I won't bluster or hold back.\n"
-	.string "This time, there's no fooling around.\p"
-	.string "Ready now?\n"
+	.string "This time, I won’t hold back.\n"
+	.string "There’s no fooling around now.\p"
+	.string "Ready?\n"
 	.string "Prepare to lose!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_Kaaah:
@@ -553,14 +532,14 @@ BattleFrontier_BattlePalaceBattleRoom_Text_Kaaah:
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserYourTeamIsAdmirable:
 	.string "SPENSER: Well, that was some display!\n"
 	.string "Even fully unleashed, my brethren\l"
-	.string "could not overpower you.\p"
+	.string "couldn't touch you.\p"
 	.string "Your team spirit is truly admirable!\p"
 	.string "Here!\n"
 	.string "Bring me that thing, will you?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_HurryWithFrontierPass:
-	.string "My, my, if only you could maintain\n"
-	.string "a certain level of decorum…\p"
+	.string "My, my, if only you could keep\n"
+	.string "it professional…\p"
 	.string "Gaaah, here!\n"
 	.string "Hurry with that FRONTIER PASS, you!$"
 
@@ -570,5 +549,6 @@ BattleFrontier_BattlePalaceBattleRoom_Text_SpiritsSymbolTookGoldenShine:
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserComeSeeMeAgain:
 	.string "SPENSER: Gwahahah!\p"
-	.string "Come see me time and again!\n"
+	.string "Come see me again whenever!\n"
 	.string "My brethren and I will be waiting!$"
+

@@ -111,7 +111,7 @@ AbandonedShip_HiddenFloorRooms_EventScript_Trash::
 	releaseall
 	end
 
-AbandonedShip_HiddenFloorRooms_Text_BrightShinyTrash:
-	.string "It's bright and shiny!\n"
-	.string "But it's just trash…$"
+AbandonedShip_HiddenFloorRooms_Text_BrightShinyTrash::
+	.string "It’s all glinting and that, but\n"
+	.string "it’s just straight up rubbish…$"
 

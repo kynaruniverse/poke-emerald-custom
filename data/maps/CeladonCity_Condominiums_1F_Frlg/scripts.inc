@@ -62,39 +62,47 @@ CeladonCity_Condominiums_1F_EventScript_SuiteSign::
 	end
 
 CeladonCity_Condominiums_1F_Text_Meowth::
-	.string "MEOWTH: Meow!$"
+	.string "MEOWTH: (He looks like he's judging\n"
+	.string "your fashion choices.) Meow.$"
 
 CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead::
-	.string "You shouldn't spend all your money\n"
-	.string "on drinks.\p"
-	.string "Try this instead.$"
+	.string "I saw you eyeing that vending machine.\n"
+	.string "300 yen for a lukewarm soda?\p"
+	.string "In this economy? Absolutely not.\n"
+	.string "Put your wallet away and take this.$"
 
 CeladonCity_Condominiums_1F_Text_NothingBeatsThirstLikeTea::
-	.string "Nothing beats thirst like some hot\n"
-	.string "TEA.\p"
-	.string "It really is the best.$"
+	.string "This TEA is so good it'll make you\n"
+	.string "forget you're technically trespassing\l"
+	.string "in a private residence.\p"
+	.string "Stay hydrated, dearie!$"
 
 CeladonCity_Condominiums_1F_Text_MyDearMonsKeepMeCompany::
-	.string "My dear POKéMON keep me company.\n"
-	.string "MEOWTH even brings money home!$"
+	.string "Living with POKéMON is wonderful.\p"
+	.string "MEOWTH is especially helpful.\n"
+	.string "He 'finds' coins all over the city.\p"
+	.string "I don't ask where they come from and\n"
+	.string "he doesn't tell me. It's a system.$"
 
 CeladonCity_Condominiums_1F_Text_DaisyComesToBuyTea::
-	.string "Oh, hello, dearie.\n"
-	.string "Did you enjoy my TEA?\p"
-	.string "By the way, dear. Are you, by any\n"
-	.string "chance, from PALLET TOWN?\p"
-	.string "A girl from PALLET TOWN, DAISY,\n"
-	.string "she enjoys TEA every day.\p"
-	.string "She visits the CELADON DEPT. STORE\n"
-	.string "to buy some TEA.$"
+	.string "Oh, hello again, Champion!\n"
+	.string "Did that TEA clear your sinuses?\p"
+	.string "You're from PALLET TOWN, right?\p"
+	.string "DAISY from over there is obsessed\n"
+	.string "with my brewing skills.\p"
+	.string "She spends half her inheritance at the\n"
+	.string "DEPT. STORE just to try and copy me.\l"
+	.string "Bless her heart.$"
 
 CeladonCity_Condominiums_1F_Text_Clefairy::
-	.string "CLEFAIRY: Pi pippippi!$"
+	.string "CLEFAIRY: (She's practicing her\n"
+	.string "stand-up routine.) Pi-pipi!$"
 
 CeladonCity_Condominiums_1F_Text_Nidoran::
-	.string "NIDORAN♀: Kya kyaoo!$"
+	.string "NIDORAN♀: (She's suspiciously\n"
+	.string "protective of the TV remote.) Kyaa!$"
 
 CeladonCity_Condominiums_1F_Text_ManagersSuite::
 	.string "CELADON MANSION\n"
-	.string "Manager's Suite$"
+	.string "Manager's Suite - No Solicitors!$"
 

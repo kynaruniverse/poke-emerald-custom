@@ -10,17 +10,21 @@ AbandonedShip_Corridors_1F_EventScript_Charlie::
 	msgbox AbandonedShip_Corridors_1F_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-AbandonedShip_Corridors_1F_Text_CharlieIntro:
-	.string "What's so funny about having my inner\n"
-	.string "tube aboard the ship?$"
+AbandonedShip_Corridors_1F_Text_CharlieIntro::
+	.string "What you looking at? You got a problem\n"
+	.string "with me bringing my inner tube?\l"
+	.string "Mind your business, fam!$"
 
-AbandonedShip_Corridors_1F_Text_CharlieDefeat:
-	.string "Whoa, you overwhelmed me!$"
+AbandonedShip_Corridors_1F_Text_CharlieDefeat::
+	.string "Allow it, you actually caught me\n"
+	.string "off guard there.$"
 
-AbandonedShip_Corridors_1F_Text_CharliePostBattle:
-	.string "It's not easy throwing POKé BALLS\n"
-	.string "while hanging on to an inner tube!$"
+AbandonedShip_Corridors_1F_Text_CharliePostBattle::
+	.string "Hard to move correctly when you're\n"
+	.string "clutching onto a tube, you get me?$"
 
-AbandonedShip_Corridors_1F_Text_IsntItFunHere:
-	.string "Isn't it fun here?\n"
-	.string "I get excited just being here!$"
+AbandonedShip_Corridors_1F_Text_IsntItFunHere::
+	.string "This spot is moving, you know?\n"
+	.string "Feels like anything could happen in\l"
+	.string "a wreck like this. Proper hype!$"
+

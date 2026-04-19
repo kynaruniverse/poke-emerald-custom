@@ -10,9 +10,9 @@ AbandonedShip_Rooms_B1F_EventScript_FatMan::
 	msgbox AbandonedShip_Rooms_B1F_Text_GettingQueasy, MSGBOX_NPC
 	end
 
-AbandonedShip_Rooms_B1F_Text_GettingQueasy:
-	.string "Urrrrppp…\p"
-	.string "I'm getting queasy just being aboard\n"
-	.string "this ship…\p"
-	.string "It's not even moving, but…$"
+AbandonedShip_Rooms_B1F_Text_GettingQueasy::
+	.string "Ugh… my stomach is doing flips,\n"
+	.string "no cap.\p"
+	.string "This place is proper stagnant. The\n"
+	.string "smell is actually making me feel sick…$"
 

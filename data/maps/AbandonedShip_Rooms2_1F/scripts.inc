@@ -10,7 +10,7 @@ AbandonedShip_Rooms2_1F_EventScript_Dan::
 	end
 
 AbandonedShip_Rooms2_1F_EventScript_RegisterDan::
-	msgbox AbandonedShip_Rooms2_1F_Text_KiraRegister, MSGBOX_DEFAULT  @ Kira speaks for both when registering KiraAndDan
+	msgbox AbandonedShip_Rooms2_1F_Text_KiraRegister, MSGBOX_DEFAULT
 	register_matchcall TRAINER_KIRA_AND_DAN_1
 	release
 	end
@@ -49,101 +49,100 @@ AbandonedShip_Rooms2_1F_EventScript_Garrison::
 	msgbox AbandonedShip_Rooms2_1F_Text_GarrisonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-AbandonedShip_Rooms2_1F_Text_DanIntro:
-	.string "DAN: While searching for treasures,\n"
-	.string "we discovered a TRAINER!$"
+AbandonedShip_Rooms2_1F_Text_DanIntro::
+	.string "DAN: We’re hunting for loot, but\n"
+	.string "finding a mark is even better!$"
 
-AbandonedShip_Rooms2_1F_Text_DanDefeat:
-	.string "DAN: We couldn't win even though\n"
-	.string "we worked together…$"
+AbandonedShip_Rooms2_1F_Text_DanDefeat::
+	.string "DAN: We couldn't even bag a win\n"
+	.string "with the two-on-one? Peak.$"
 
-AbandonedShip_Rooms2_1F_Text_DanPostBattle:
-	.string "DAN: We can't find any treasures…\n"
-	.string "I wonder if someone got them already?$"
+AbandonedShip_Rooms2_1F_Text_DanPostBattle::
+	.string "DAN: This ship is empty, man. Someone\n"
+	.string "already cleared the place out.$"
 
-AbandonedShip_Rooms2_1F_Text_DanNotEnoughMons:
-	.string "DAN: You don't even have two POKéMON.\n"
-	.string "You can't expect to beat us like that.$"
+AbandonedShip_Rooms2_1F_Text_DanNotEnoughMons::
+	.string "DAN: You’re rolling solo? You need\n"
+	.string "backup if you want to step to us.$"
 
-AbandonedShip_Rooms2_1F_Text_KiraIntro:
-	.string "KIRA: Oh?\n"
-	.string "We were searching for treasures.\l"
-	.string "But we discovered a TRAINER instead!$"
+AbandonedShip_Rooms2_1F_Text_KiraIntro::
+	.string "KIRA: Oh? We were looking for\n"
+	.string "something valuable to pocket.\p"
+	.string "I guess your POKé BALLS will do!$"
 
-AbandonedShip_Rooms2_1F_Text_KiraDefeat:
-	.string "KIRA: Ooh, so strong!$"
+AbandonedShip_Rooms2_1F_Text_KiraDefeat::
+	.string "KIRA: You’re actually moving like that?$"
 
-AbandonedShip_Rooms2_1F_Text_KiraPostBattle:
-	.string "KIRA: Where could the treasures be?\p"
-	.string "I've already decided what I'm buying\n"
-	.string "when we find the treasures!$"
+AbandonedShip_Rooms2_1F_Text_KiraPostBattle::
+	.string "KIRA: Where is the real loot at?\p"
+	.string "I already know what I’m spending\n"
+	.string "the profit on when I find it!$"
 
-AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons:
-	.string "KIRA: Oh, you don't have two POKéMON?\n"
-	.string "We'll have to battle some other time!$"
+AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons::
+	.string "KIRA: Roll deep or don't roll at all.\n"
+	.string "Come back when you have a squad.$"
 
-AbandonedShip_Rooms2_1F_Text_KiraRegister:
-	.string "KIRA: Oh, you make me so angry!\n"
-	.string "I'm going to register you for that!$"
+AbandonedShip_Rooms2_1F_Text_KiraRegister::
+	.string "KIRA: You’ve got me bare stressed!\n"
+	.string "I’m putting you on my list for that!$"
 
-AbandonedShip_Rooms2_1F_Text_DanRematchIntro:
-	.string "DAN: We've been searching for\n"
-	.string "treasures all this time.\p"
-	.string "Our POKéMON have grown stronger, too.\n"
-	.string "Let us show you, okay?$"
+AbandonedShip_Rooms2_1F_Text_DanRematchIntro::
+	.string "DAN: We’re still here looking for\n"
+	.string "something to flip.\p"
+	.string "The team’s leveled up, though.\n"
+	.string "You ready for this round?$"
 
-AbandonedShip_Rooms2_1F_Text_DanRematchDefeat:
-	.string "DAN: You're strong, as usual!$"
+AbandonedShip_Rooms2_1F_Text_DanRematchDefeat::
+	.string "DAN: Still on top of your game, eh?$"
 
-AbandonedShip_Rooms2_1F_Text_DanPostRematch:
-	.string "DAN: We can't find any treasures,\n"
-	.string "we lose at POKéMON…\p"
-	.string "I want to go home… But if I say that,\n"
-	.string "she gets all angry with me…$"
+AbandonedShip_Rooms2_1F_Text_DanPostRematch::
+	.string "DAN: No loot, no wins... this trip\n"
+	.string "is a total waste, man.\p"
+	.string "I want to bounce, but she’ll just\n"
+	.string "start shouting if I say anything...$"
 
-AbandonedShip_Rooms2_1F_Text_DanRematchNotEnoughMons:
-	.string "DAN: You don't even have two POKéMON.\n"
-	.string "You can't expect to beat us like that.$"
+AbandonedShip_Rooms2_1F_Text_DanRematchNotEnoughMons::
+	.string "DAN: Where’s your team? We don't\n"
+	.string "brawl with individuals.$"
 
-AbandonedShip_Rooms2_1F_Text_KiraRematchIntro:
-	.string "KIRA: Oh? We meet again!\p"
-	.string "Just like us, you still haven't given up\n"
-	.string "searching for treasures, have you?\p"
-	.string "Want to make it so the loser has\n"
-	.string "to give up searching?$"
+AbandonedShip_Rooms2_1F_Text_KiraRematchIntro::
+	.string "KIRA: Oh, it’s you again!\p"
+	.string "Still trying to scavenge the same\n"
+	.string "spot as us, I see.\p"
+	.string "How about a wager? Loser has to\n"
+	.string "clear out of this sector.$"
 
-AbandonedShip_Rooms2_1F_Text_KiraRematchDefeat:
-	.string "KIRA: Oh, we lost again…$"
+AbandonedShip_Rooms2_1F_Text_KiraRematchDefeat::
+	.string "KIRA: Lost again? No way.$"
 
-AbandonedShip_Rooms2_1F_Text_KiraPostRematch:
-	.string "KIRA: We're not leaving until we raise\n"
-	.string "our POKéMON some more and we find\l"
-	.string "the treasures here!$"
+AbandonedShip_Rooms2_1F_Text_KiraPostRematch::
+	.string "KIRA: We aren't leaving until we\n"
+	.string "find something worth our time!$"
 
-AbandonedShip_Rooms2_1F_Text_KiraRematchNotEnoughMons:
-	.string "KIRA: Oh, you don't have two POKéMON?\n"
-	.string "We'll have to battle some other time!$"
+AbandonedShip_Rooms2_1F_Text_KiraRematchNotEnoughMons::
+	.string "KIRA: Still rolling by yourself?\n"
+	.string "Get some friends, then we'll talk.$"
 
-AbandonedShip_Rooms2_1F_Text_JaniIntro:
-	.string "I'm not good at swimming,\n"
-	.string "but I am good at battles!$"
+AbandonedShip_Rooms2_1F_Text_JaniIntro::
+	.string "I can't swim a lap, but I can\n"
+	.string "certainly run a set!$"
 
-AbandonedShip_Rooms2_1F_Text_JaniDefeat:
-	.string "Oops.\n"
-	.string "That didn't go very well.$"
+AbandonedShip_Rooms2_1F_Text_JaniDefeat::
+	.string "Safe... that went south fast.$"
 
-AbandonedShip_Rooms2_1F_Text_JaniPostBattle:
-	.string "Walking around barefoot in this ship\n"
-	.string "is kind of gross.$"
+AbandonedShip_Rooms2_1F_Text_JaniPostBattle::
+	.string "Creps are getting ruined in here.\n"
+	.string "This ship is proper grimey.$"
 
-AbandonedShip_Rooms2_1F_Text_GarrisonIntro:
-	.string "Strength and compassion…\n"
-	.string "Those are a TRAINER's treasures!$"
+AbandonedShip_Rooms2_1F_Text_GarrisonIntro::
+	.string "Staying sharp and looking out for\n"
+	.string "your own—that’s the real prize!$"
 
-AbandonedShip_Rooms2_1F_Text_GarrisonDefeat:
-	.string "Ah, there is something about you\n"
-	.string "that sparkles.$"
+AbandonedShip_Rooms2_1F_Text_GarrisonDefeat::
+	.string "You’ve definitely got that\n"
+	.string "inner shine, fam.$"
 
-AbandonedShip_Rooms2_1F_Text_GarrisonPostBattle:
-	.string "In a cabin somewhere on board,\n"
-	.string "I saw something sparkle.$"
+AbandonedShip_Rooms2_1F_Text_GarrisonPostBattle::
+	.string "In one of these rooms, I saw something\n"
+	.string "flicker. Keep your eyes peeled.$"
+

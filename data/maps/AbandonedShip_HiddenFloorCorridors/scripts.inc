@@ -131,25 +131,24 @@ AbandonedShip_HiddenFloorCorridors_EventScript_TheDoorIsOpen::
 	releaseall
 	end
 
-AbandonedShip_HiddenFloorCorridors_Text_Rm1DoorIsLocked:
-	.string "The door is locked.\p"
-	.string "“RM. 1” is painted on the door.$"
+AbandonedShip_HiddenFloorCorridors_Text_Rm1DoorIsLocked::
+	.string "Locked tight.\n"
+	.string "Someone’s tagged “RM. 1” on it.$"
 
-AbandonedShip_HiddenFloorCorridors_Text_Rm2DoorIsLocked:
-	.string "The door is locked.\p"
-	.string "“RM. 2” is painted on the door.$"
+AbandonedShip_HiddenFloorCorridors_Text_Rm2DoorIsLocked::
+	.string "No luck, it's locked.\n"
+	.string "“RM. 2” is painted on the rust.$"
 
-AbandonedShip_HiddenFloorCorridors_Text_Rm4DoorIsLocked:
-	.string "The door is locked.\p"
-	.string "“RM. 4” is painted on the door.$"
+AbandonedShip_HiddenFloorCorridors_Text_Rm4DoorIsLocked::
+	.string "Locked. Someone’s scratched\n"
+	.string "“RM. 4” into the metal.$"
 
-AbandonedShip_HiddenFloorCorridors_Text_Rm6DoorIsLocked:
-	.string "The door is locked.\p"
-	.string "“RM. 6” is painted on the door.$"
+AbandonedShip_HiddenFloorCorridors_Text_Rm6DoorIsLocked::
+	.string "It's locked.\n"
+	.string "“RM. 6” is barely visible on the door.$"
 
-AbandonedShip_HiddenFloorCorridors_Text_InsertedKey:
-	.string "{PLAYER} inserted and turned the\n"
-	.string "KEY.\p"
-	.string "The inserted KEY stuck fast,\n"
-	.string "but the door opened.$"
+AbandonedShip_HiddenFloorCorridors_Text_InsertedKey::
+	.string "{PLAYER} jammed the KEY in.\p"
+	.string "The lock’s proper stiff, but it\n"
+	.string "eventually clicked open.$"
 

@@ -44,8 +44,6 @@ LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToDoor::
 	setobjectmovementtype LOCALID_PLAYERS_HOUSE_1F_MOM, MOVEMENT_TYPE_FACE_UP
 	return
 
-@ Many of the below scripts have no gender check because they assume youre in the correct house
-@ The below SS Ticket script uses Mays house state by accident(?), but theyre both set identically after the intro
 LittlerootTown_BrendansHouse_1F_OnFrame:
 	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 3, LittlerootTown_BrendansHouse_1F_EventScript_EnterHouseMovingIn
 	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_BrendansHouse_1F_EventScript_GoUpstairsToSetClock
@@ -58,17 +56,9 @@ LittlerootTown_BrendansHouse_1F_EventScript_GoUpstairsToSetClock::
 	lockall
 	msgbox PlayersHouse_1F_Text_GoSetTheClock, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_PLAYER, LittlerootTown_BrendansHouse_1F_Movement_PushTowardStairs
-	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, LittlerootTown_BrendansHouse_1F_Movement_PushTowardStairs
-	waitmovement 0
-	warp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 7, 1
-	waitstate
+	setvar VAR_LITTLEROOT_INTRO_STATE, 5
 	releaseall
 	end
-
-LittlerootTown_BrendansHouse_1F_Movement_PushTowardStairs:
-	walk_up
-	step_end
 
 LittlerootTown_BrendansHouse_1F_EventScript_EnterHouseMovingIn::
 	lockall
@@ -283,157 +273,142 @@ LittlerootTown_BrendansHouse_1F_Movement_BrendanGoUpstairs2:
 	walk_up
 	step_end
 
-_Text_IsntItNiceInHere:
+@ Text Definitions
+
+_Text_IsntItNiceInHere::
     .string "Finally out the van? You look a mess.\n"
     .string "Go upstairs, check the time, then go\n"
     .string "find a hustle or something. You’re\n"
     .string "bare cluttering up my front room.$"
-	.string "Isn't it nice in here, too?$"
 
-PlayersHouse_1F_Text_MoversPokemonGoSetClock:
-	.string "The mover's POKéMON do all the work\n"
-	.string "of moving us in and cleaning up after.\l"
-	.string "This is so convenient!\p"
-	.string "{PLAYER}, your room is upstairs.\n"
-	.string "Go check it out, dear!\p"
-	.string "DAD bought you a new clock to mark\n"
-	.string "our move here.\l"
-	.string "Don't forget to set it!$"
+PlayersHouse_1F_Text_MoversPokemonGoSetClock::
+	.string "Those VIGOROTH are actually putting\n"
+	.string "in work. Bout time someone did.\p"
+	.string "Anyway, your room's upstairs.\n"
+	.string "Go sort your life out.\p"
+	.string "Your Dad got you a clock. Fix it\n"
+	.string "so you aren't late for once.$"
 
-PlayersHouse_1F_Text_ArentYouInterestedInRoom:
-	.string "MOM: Well, {PLAYER}?\p"
-	.string "Aren't you interested in seeing your\n"
-	.string "very own room?$"
+PlayersHouse_1F_Text_ArentYouInterestedInRoom::
+	.string "MOM: Well? You just gonna stand there\n"
+	.string "looking like a NPC? Go see your room.$"
 
-PlayersHouse_1F_Text_GoSetTheClock:
-	.string "MOM: {PLAYER}.\p"
-	.string "Go set the clock in your room, honey.$"
+PlayersHouse_1F_Text_GoSetTheClock::
+	.string "MOM: Clock. Upstairs. Now.\n"
+	.string "Don't make me say it again.$"
 
-PlayersHouse_1F_Text_OhComeQuickly:
-	.string "MOM: Oh! {PLAYER}, {PLAYER}!\n"
-	.string "Quick! Come quickly!$"
+PlayersHouse_1F_Text_OhComeQuickly::
+	.string "MOM: Yo! {PLAYER}!\n"
+	.string "Get over here, quick!$"
 
-PlayersHouse_1F_Text_MaybeDadWillBeOn:
-	.string "MOM: Look! It's PETALBURG GYM!\n"
-	.string "Maybe DAD will be on!$"
+PlayersHouse_1F_Text_MaybeDadWillBeOn::
+	.string "MOM: Look, it's the Gym on the news.\n"
+	.string "Maybe the old man's acting up again!$"
 
-PlayersHouse_1F_Text_ItsOverWeMissedHim:
-	.string "MOM: Oh… It's over.\p"
-	.string "I think DAD was on, but we missed him.\n"
-	.string "Too bad.$"
+PlayersHouse_1F_Text_ItsOverWeMissedHim::
+	.string "MOM: Safe, it's finished.\p"
+	.string "Pretty sure that was him, but you\n"
+	.string "moved too slow. Long day.$"
 
-PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
-	.string "Oh, yes.\n"
-	.string "One of DAD's friends lives in town.\p"
-	.string "PROF. BIRCH is his name.\p"
-	.string "He lives right next door, so you should\n"
-	.string "go over and introduce yourself.$"
+PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor::
+	.string "Listen, one of your Dad's mates\n"
+	.string "lives in this dead town.\p"
+	.string "PROF. BIRCH. That's him.\p"
+	.string "He's literally next door. Go link him\n"
+	.string "and introduce yourself.$"
 
-PlayersHouse_1F_Text_SeeYouHoney:
-	.string "MOM: See you, honey!$"
+PlayersHouse_1F_Text_SeeYouHoney::
+	.string "MOM: In a bit!$"
 
-PlayersHouse_1F_Text_DidYouMeetProfBirch:
-	.string "MOM: Did you introduce yourself to\n"
-	.string "PROF. BIRCH?$"
+PlayersHouse_1F_Text_DidYouMeetProfBirch::
+	.string "MOM: Did you actually link BIRCH\n"
+	.string "or are you just stalling?$"
 
-PlayersHouse_1F_Text_YouShouldRestABit:
-	.string "MOM: How are you doing, {PLAYER}?\n"
-	.string "You look a little tired.\p"
-	.string "I think you should rest a bit.$"
+PlayersHouse_1F_Text_YouShouldRestABit::
+	.string "MOM: You look drained, fam.\n"
+	.string "Take five and rest.$"
 
-PlayersHouse_1F_Text_TakeCareHoney:
-	.string "MOM: Take care, honey!$"
+PlayersHouse_1F_Text_TakeCareHoney::
+	.string "MOM: Safe travels!$"
 
-PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom:
-	.string "MOM: Oh? Did DAD give you that BADGE?\p"
-	.string "Then here's something from your MOM!$"
+PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom::
+	.string "MOM: Oh? You actually beat him?\p"
+	.string "Take this. Don't spend it all at once.$"
 
-PlayersHouse_1F_Text_DontPushYourselfTooHard:
-	.string "Don't push yourself too hard, dear.\n"
-	.string "You can always come home.\p"
-	.string "Go for it, honey!$"
+PlayersHouse_1F_Text_DontPushYourselfTooHard::
+	.string "Don't go doing too much, yeah?\n"
+	.string "Home's always here if you're stuck.\p"
+	.string "Go get it.$"
 
-PlayersHouse_1F_Text_IsThatAPokenav:
-	.string "MOM: What is that, honey? A POKéNAV?\n"
-	.string "Someone from DEVON gave it to you?\p"
-	.string "Well, honey, how about registering\n"
-	.string "your mom?\p"
+PlayersHouse_1F_Text_IsThatAPokenav::
+	.string "MOM: What's that? A POKéNAV?\n"
+	.string "Fancy. Some tech from DEVON?\p"
+	.string "Register me on that, yeah?\p"
 	.string "… … …$"
 
-PlayersHouse_1F_Text_RegisteredMom:
+PlayersHouse_1F_Text_RegisteredMom::
 	.string "Registered MOM\n"
 	.string "in the POKéNAV.$"
 
-PlayersHouse_1F_Text_Vigoroth1:
+PlayersHouse_1F_Text_Vigoroth1::
 	.string "Fugiiiiih!$"
 
-PlayersHouse_1F_Text_Vigoroth2:
+PlayersHouse_1F_Text_Vigoroth2::
 	.string "Huggoh, uggo uggo…$"
 
-PlayersHouse_1F_Text_ReportFromPetalburgGym:
-	.string "INTERVIEWER: …We brought you this\n"
-	.string "report from in front of PETALBURG GYM.$"
+PlayersHouse_1F_Text_ReportFromPetalburgGym::
+	.string "TV: …And that was the report from\n"
+	.string "outside the PETALBURG GYM.$"
 
-PlayersHouse_1F_Text_TheresAMovieOnTV:
-	.string "There is a movie on TV.\p"
-	.string "Two men are dancing on a big piano\n"
-	.string "keyboard.\p"
-	.string "Better get going!$"
+PlayersHouse_1F_Text_TheresAMovieOnTV::
+	.string "There's a dead movie on.\p"
+	.string "Some guys dancing on a piano.\n"
+	.string "Better get moving.$"
 
-PlayersHouse_1F_Text_RunningShoesManual:
-	.string "It's the instruction booklet for the\n"
-	.string "RUNNING SHOES.\p"
-	.string "“Press the B Button to run while\n"
-	.string "wearing your RUNNING SHOES.\p"
-	.string "“Lace up your RUNNING SHOES and hit\n"
-	.string "the road running!”$"
+PlayersHouse_1F_Text_RunningShoesManual::
+	.string "It's a manual for some creps.\p"
+	.string "“Hold B to move faster.\p"
+	.string "“Put 'em on and don't get caught!”$"
 
-PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
-	.string "DAD: Hm?\p"
-	.string "Hey, it's {PLAYER}!\p"
-	.string "It's been a while since I saw you,\n"
-	.string "but you look…stronger, somehow.\p"
-	.string "That's the impression I get.\n"
-	.string "But your old man hasn't given up yet!\p"
-	.string "Oh, yes, I have something for you.\n"
-	.string "This came to you from someone named\l"
-	.string "MR. BRINEY.$"
+PlayersHouse_1F_Text_TicketFromBrineyCameForYou::
+	.string "DAD: Yo.\p"
+	.string "Look who it is.\p"
+	.string "You've grown up a bit, haven't you?\n"
+	.string "Look more like you're about it now.\p"
+	.string "But I'm still the boss here!\n"
+	.string "Anyway, take this. Some guy named\l"
+	.string "BRINEY dropped it off.$"
 
-PlayersHouse_1F_Text_PortsInSlateportLilycove:
-	.string "DAD: Hm, a TICKET for a ferry?\p"
-	.string "If I recall, there are ferry ports in\n"
-	.string "SLATEPORT and LILYCOVE.$"
+PlayersHouse_1F_Text_PortsInSlateportLilycove::
+	.string "DAD: A ferry ticket?\p"
+	.string "The ports are in SLATEPORT and\n"
+	.string "LILYCOVE if you're trying to move.$"
 
-PlayersHouse_1F_Text_BetterGetBackToGym:
-	.string "I'd better get back to PETALBURG GYM.\p"
-	.string "MOM, thanks for looking after the house\n"
-	.string "while I'm away.$"
+PlayersHouse_1F_Text_BetterGetBackToGym::
+	.string "I'm heading back to the Gym.\p"
+	.string "Watch the place while I'm gone, yeah?$"
 
-PlayersHouse_1F_Text_DadShouldStayLonger:
-	.string "MOM: That DAD of yours…\p"
-	.string "He comes home for the first time in a\n"
-	.string "while, but all he talks about is POKéMON.\p"
-	.string "He should relax and stay a little longer.$"
+PlayersHouse_1F_Text_DadShouldStayLonger::
+	.string "MOM: That man…\p"
+	.string "Comes home for two minutes and\n"
+	.string "all he talks about is POKéMON.\p"
+	.string "Needs to chill out for once.$"
 
-PlayersHouse_1F_Text_IsThatABreakingStory:
-	.string "MOM: Is that a breaking news story?$"
+PlayersHouse_1F_Text_IsThatABreakingStory::
+	.string "MOM: Wait, is this a madness?$"
 
-PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
-	.string "We bring you this emergency\n"
-	.string "news flash!\p"
-	.string "In various HOENN locales, there have\n"
-	.string "been reports of a BZZT…colored\l"
-	.string "POKéMON in flight.\p"
-	.string "The identity of this POKéMON is\n"
-	.string "currently unknown.\p"
-	.string "We now return you to the regular\n"
-	.string "movie program.$"
+PlayersHouse_1F_Text_LatiEmergencyNewsFlash::
+	.string "EMERGENCY BROADCAST!\p"
+	.string "Reports are coming in of a weird\n"
+	.string "colored POKéMON flying around.\p"
+	.string "We don't know what it is yet.\p"
+	.string "Back to your regularly scheduled film.$"
 
-PlayersHouse_1F_Text_WhatColorDidTheySay:
-	.string "MOM: {PLAYER}, did you catch that?\p"
-	.string "What color did the announcer say\n"
-	.string "that POKéMON was?$"
+PlayersHouse_1F_Text_WhatColorDidTheySay::
+	.string "MOM: Yo, did you catch that?\p"
+	.string "What color did they say it was?$"
 
-PlayersHouse_1F_Text_StillUnknownPokemon:
-	.string "MOM: Well, isn't that something!\n"
-	.string "There are still unknown POKéMON.$"
+PlayersHouse_1F_Text_StillUnknownPokemon::
+	.string "MOM: Mad. Still things out there\n"
+	.string "we haven't seen yet.$"
+

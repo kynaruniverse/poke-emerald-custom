@@ -45,21 +45,22 @@ BattleFrontier_Mart_EventScript_Boy::
 	end
 
 BattleFrontier_Mart_Text_ChaperonGrandson:
-	.string "We came here to chaperon our\n"
-	.string "grandson.\p"
-	.string "But since we're here, we thought\n"
-	.string "we should get some souvenirs.$"
+	.string "We’re just out here to keep an eye\n"
+	.string "on our grandson.\p"
+	.string "But since we’ve made the trip, we\n"
+	.string "reckoned we’d pick up some bits to\l"
+	.string "take home as souvenirs.$"
 
 BattleFrontier_Mart_Text_ProteinMakeNiceGift:
-	.string "Dear, what do you think of this?\n"
-	.string "Wouldn't this make a nice gift?\p"
-	.string "It's…PRO…TE…IN?\n"
-	.string "It sounds delicious, doesn't it?$"
+	.string "Love, what do you reckon to this?\n"
+	.string "Wouldn't this be a top gift?\p"
+	.string "It's… PRO… TE… IN?\n"
+	.string "Sounds like a proper treat, don't it?$"
 
 BattleFrontier_Mart_Text_FacilitiesDontAllowItems:
-	.string "A lot of the BATTLE FRONTIER's\n"
-	.string "facilities don't allow the use of items\l"
-	.string "during battles.\p"
-	.string "That rule makes things tougher than\n"
-	.string "they already are!$"
+	.string "Bare facilities in the BATTLE FRONTIER\n"
+	.string "don't let you use items while you're\l"
+	.string "in a scrap.\p"
+	.string "That rule makes the whole thing\n"
+	.string "way more peak than it already is!$"
 

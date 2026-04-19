@@ -84,7 +84,7 @@ BattleFrontier_BattleArenaCorridor_Movement_AttendantMoveOutOfWay:
 	walk_in_place_faster_down
 	step_end
 
-BattleFrontier_BattleArenaCorridor_Text_PleaseStepIn:
-	.string "Your battles shall be waged in\n"
-	.string "the next room. Please step in!$"
+BattleFrontier_BattleArenaCorridor_Text_PleaseStepIn::
+	.string "The ring is through those doors.\n"
+	.string "Go in and handle your business!$"
 

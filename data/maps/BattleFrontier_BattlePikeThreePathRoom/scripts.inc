@@ -49,7 +49,7 @@ BattleFrontier_BattlePikeThreePathRoom_EventScript_ResumeChallenge::
 	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_Attendant::
-	frontier_get FRONTIER_DATA_BATTLE_NUM  @ Room number
+	frontier_get FRONTIER_DATA_BATTLE_NUM
 	switch VAR_RESULT
 	case 1, BattleFrontier_BattlePikeThreePathRoom_EventScript_AttendantRoom1
 	case 3, BattleFrontier_BattlePikeThreePathRoom_EventScript_AttendantRoom3
@@ -65,49 +65,42 @@ BattleFrontier_BattlePikeThreePathRoom_EventScript_AttendantRoom1::
 	faceplayer
 	msgbox BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom1, MSGBOX_DEFAULT
 	goto BattleFrontier_BattlePikeThreePathRoom_EventScript_AskContinueChallenge
-	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_AttendantRoom3::
 	lock
 	faceplayer
 	msgbox BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom3, MSGBOX_DEFAULT
 	goto BattleFrontier_BattlePikeThreePathRoom_EventScript_AskContinueChallenge
-	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_AttendantRoom5::
 	lock
 	faceplayer
 	msgbox BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom5, MSGBOX_DEFAULT
 	goto BattleFrontier_BattlePikeThreePathRoom_EventScript_AskContinueChallenge
-	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_AttendantRoom7::
 	lock
 	faceplayer
 	msgbox BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom7, MSGBOX_DEFAULT
 	goto BattleFrontier_BattlePikeThreePathRoom_EventScript_AskContinueChallenge
-	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_AttendantRoom9::
 	lock
 	faceplayer
 	msgbox BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom9, MSGBOX_DEFAULT
 	goto BattleFrontier_BattlePikeThreePathRoom_EventScript_AskContinueChallenge
-	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_AttendantRoom11::
 	lock
 	faceplayer
 	msgbox BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom11, MSGBOX_DEFAULT
 	goto BattleFrontier_BattlePikeThreePathRoom_EventScript_AskContinueChallenge
-	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_AttendantRoom13::
 	lock
 	faceplayer
 	msgbox BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom13, MSGBOX_DEFAULT
 	goto BattleFrontier_BattlePikeThreePathRoom_EventScript_AskContinueChallenge
-	end
 
 BattleFrontier_BattlePikeThreePathRoom_EventScript_AskContinueChallenge::
 	msgbox BattleFrontier_BattlePikeThreePathRoom_Text_ContinueWithChallenge, MSGBOX_YESNO
@@ -262,106 +255,100 @@ BattleFrontier_BattlePikeThreePathRoom_Movement_HintGiverReturnToPos:
 	step_end
 
 BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom1:
-	.string "You are currently in\n"
-	.string "the 1st room…$"
+	.string "You’re in the 1st room right now…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom3:
-	.string "You are currently in\n"
-	.string "the 3rd room…$"
+	.string "You’re in the 3rd room right now…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom5:
-	.string "You are currently in\n"
-	.string "the 5th room…$"
+	.string "You’re in the 5th room right now…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom7:
-	.string "You are currently in\n"
-	.string "the 7th room…$"
+	.string "You’re in the 7th room right now…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom9:
-	.string "You are currently in\n"
-	.string "the 9th room…$"
+	.string "You’re in the 9th room right now…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom11:
-	.string "You are currently in\n"
-	.string "the 11th room…$"
+	.string "You’re in the 11th room right now…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_CurrentlyInRoom13:
-	.string "You are currently in\n"
-	.string "the 13th room…$"
+	.string "You’re in the 13th room right now…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_ContinueWithChallenge:
-	.string "Will you continue with\n"
-	.string "your challenge?$"
+	.string "Are you gonna keep going with\n"
+	.string "the challenge?$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_SaveChallengeAndQuit:
-	.string "Would you like to save your challenge\n"
-	.string "and quit the game for now?$"
+	.string "Wanna save your progress and jump\n"
+	.string "off for a bit?$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_RetireFromChallenge:
-	.string "Do you wish to retire from your\n"
-	.string "Battle Choice challenge?$"
+	.string "You tryna retire from the Battle\n"
+	.string "Choice challenge already?$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_AwaitingReturnSaveBeforeResume:
-	.string "We've been awaiting your return…\p"
-	.string "Before resuming your Battle Choice\n"
-	.string "challenge, let me save the game…$"
+	.string "We’ve been waiting for you to come\n"
+	.string "back, fam…\p"
+	.string "Before we jump back in, let me just\n"
+	.string "save the game real quick…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_PleaseEnjoyChallenge:
-	.string "Please do enjoy your Battle Choice\n"
-	.string "challenge…$"
+	.string "Have a good one with the challenge…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_SavingYourData:
-	.string "I am saving your data…\n"
-	.string "A little time, please…$"
+	.string "Just saving your data now…\n"
+	.string "Give me a sec…$"
 
 BattleFrontier_BattlePike_Text_PathBlockedNoTurningBack:
 	.string "The path is blocked!\n"
-	.string "And there is no turning back…$"
+	.string "There’s no turning back now…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_FindingItDifficultToChoose:
-	.string "I beg your pardon, but…\p"
-	.string "Are you perhaps finding it difficult\n"
-	.string "to choose your path?$"
+	.string "My bad, but…\p"
+	.string "Are you having a bit of trouble\n"
+	.string "picking a path?$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_ApologizeForImpertinence:
 	.string "I see…\n"
-	.string "I apologize for my impertinence…$"
+	.string "Sorry for sticking my nose in…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_SomethingAboutRightPath:
-	.string "Ah, let me see… There is something\n"
-	.string "about the path on the right…$"
+	.string "Let me check… I’m getting a weird\n"
+	.string "vibe from the right path…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_SomethingAboutCenterPath:
-	.string "Ah, let me see… There is something\n"
-	.string "about the path in the center…$"
+	.string "Let me check… I’m getting a weird\n"
+	.string "vibe from the center path…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_SomethingAboutLeftPath:
-	.string "Ah, let me see… There is something\n"
-	.string "about the path on the left…$"
+	.string "Let me check… I’m getting a weird\n"
+	.string "vibe from the left path…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_AromaOfPokemon:
-	.string "It seems to have the distinct aroma\n"
-	.string "of POKéMON wafting around it…$"
+	.string "There’s a proper strong smell of\n"
+	.string "POKéMON coming from it…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_PresenceOfPeople:
-	.string "Is it… A TRAINER?\n"
-	.string "I sense the presence of people…$"
+	.string "Is that… a TRAINER?\n"
+	.string "I can definitely sense someone there…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_HeardWhispering:
-	.string "I seem to have heard something…\n"
-	.string "It may have been whispering…$"
+	.string "I think I heard something…\n"
+	.string "Sounded like someone whispering…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_WaveOfNostaliga:
-	.string "For some odd reason, I felt a wave\n"
-	.string "of nostalgia coming from it…$"
+	.string "For some reason, it’s giving me a\n"
+	.string "proper nostalgic feeling…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_TerrifyingEvent:
-	.string "I am sorry to say…\p"
-	.string "A terrifying event, yes, a horrible one,\n"
-	.string "is about to befall you…\p"
-	.string "I urge you to pay the utmost care\n"
-	.string "and prepare for the worst…$"
+	.string "I’m sorry to have to say this…\p"
+	.string "Something proper terrifying is about\n"
+	.string "to happen to you…\p"
+	.string "You better be careful and prepare for\n"
+	.string "the absolute worst, fam…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_DreadfulPresence:
-	.string "From every path I sense a dreadful\n"
-	.string "presence…$"
+	.string "I’m getting a peak feeling from\n"
+	.string "every single path…$"
+

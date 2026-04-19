@@ -357,225 +357,175 @@ BattleFrontier_BattleArenaLobby_EventScript_ExitRules::
 	releaseall
 	end
 
-BattleFrontier_BattleArenaLobby_Text_WelcomeToBattleArena:
-	.string "Where the battling spirit of TRAINERS\n"
-	.string "is put to the test!\p"
-	.string "I welcome you to the BATTLE ARENA!\p"
-	.string "I am your guide to the Set KO Tourney!$"
+BattleFrontier_BattleArenaLobby_Text_WelcomeToBattleArena::
+	.string "Yo! This is where the real ones come\n"
+	.string "to test their grit.\p"
+	.string "Welcome to the BATTLE ARENA!\p"
+	.string "I’m your promoter for the KO Tourney!$"
 
-BattleFrontier_BattleArenaLobby_Text_WishToTakeChallenge:
-	.string "Now, do you wish to take\n"
-	.string "the BATTLE ARENA challenge?$"
+BattleFrontier_BattleArenaLobby_Text_WishToTakeChallenge::
+	.string "You ready to step into the ring and\n"
+	.string "take the challenge?$"
 
-BattleFrontier_BattleArenaLobby_Text_AwaitAnotherChallenge:
-	.string "We await your challenge on\n"
-	.string "another occasion!$"
+BattleFrontier_BattleArenaLobby_Text_AwaitAnotherChallenge::
+	.string "Safe... we’ll be here when you’re\n"
+	.string "ready to catch these hands!$"
 
-BattleFrontier_BattleArenaLobby_Text_ExplainChallenge:
-	.string "In the BATTLE ARENA, we undertake\n"
-	.string "the Set KO Tourney.\p"
-	.string "All participants enter with a team of\n"
-	.string "three POKéMON.\p"
-	.string "The three POKéMON must be lined up in\n"
-	.string "the order in which they are to appear.\p"
-	.string "During battle, the POKéMON will appear\n"
-	.string "one at a time in the preset order.\p"
-	.string "Once a POKéMON enters battle, it must\n"
-	.string "remain out until the match is decided.\p"
-	.string "If a match remains undecided in\n"
-	.string "three turns, it goes to judging.\p"
-	.string "If you wish to interrupt your challenge,\n"
-	.string "please save the game.\p"
-	.string "If you don't save, you will not be able\n"
-	.string "to continue with your challenge.\p"
-	.string "If you pull off the feat of beating\n"
-	.string "seven TRAINERS in succession,\l"
-	.string "we will present you with Battle Points.$"
+BattleFrontier_BattleArenaLobby_Text_ExplainChallenge::
+	.string "In the BATTLE ARENA, we run the\n"
+	.string "Set KO Tourney. High stakes only.\p"
+	.string "You enter with a squad of three.\p"
+	.string "Order is everything. They come out\n"
+	.string "exactly how you line 'em up.\p"
+	.string "No tagging out. Once a POKéMON is in,\n"
+	.string "it fights until the match is settled.\p"
+	.string "If nobody's dropped after three turns,\n"
+	.string "the REFEREE steps in to judge.\p"
+	.string "If you need a break, you gotta save.\n"
+	.string "No save? No continuing the run.\p"
+	.string "Clear seven TRAINERS in a row and\n"
+	.string "you’ll secure some Battle Points.$"
 
-BattleFrontier_BattleArenaLobby_Text_OkayToSave:
-	.string "Before showing you to the BATTLE\n"
-	.string "ARENA, you must save. Is that okay?$"
+BattleFrontier_BattleArenaLobby_Text_OkayToSave::
+	.string "Before I let you through to the pits,\n"
+	.string "you gotta save. You good?$"
 
-BattleFrontier_BattleArenaLobby_Text_WhichLevelMode:
-	.string "The BATTLE ARENA offers two levels\n"
-	.string "of challenge, Level 50 and Open Level.\l"
-	.string "Which is your choice?$"
+BattleFrontier_BattleArenaLobby_Text_WhichLevelMode::
+	.string "We got two brackets: Level 50 or\n"
+	.string "the Open Level. Where you at?$"
 
-BattleFrontier_BattleArenaLobby_Text_SelectThreeMons:
-	.string "Very well, now select your\n"
-	.string "three POKéMON, please.$"
+BattleFrontier_BattleArenaLobby_Text_SelectThreeMons::
+	.string "Respect. Pick your three heaviest\n"
+	.string "hitters, please.$"
 
-BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsLvOpen:
-	.string "My dear challenger!\p"
-	.string "You do not have the three POKéMON\n"
-	.string "required for entry.\p"
-	.string "To qualify, you must bring three\n"
-	.string "different kinds of POKéMON.\p"
-	.string "They also must not hold the same\n"
-	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1}.$"
+BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsLvOpen::
+	.string "Hold up, challenger!\p"
+	.string "Your squad isn't legal for entry.\p"
+	.string "You need three different POKéMON\n"
+	.string "to step into this ring.\p"
+	.string "And no duplicate items either.\p"
+	.string "EGGS{STR_VAR_1} aren't allowed.$"
 
-BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsEnd:
-	.string "When you have made your preparations,\n"
-	.string "please do return.$"
+BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsEnd::
+	.string "Get your team sorted and come back\n"
+	.string "when you’re ready to bang.$"
 
-BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsLv50:
-	.string "My dear challenger!\p"
-	.string "You do not have the three POKéMON\n"
-	.string "required for entry.\p"
-	.string "To qualify, you must bring three\n"
-	.string "different kinds of POKéMON.\p"
-	.string "The three different POKéMON\n"
-	.string "must all be Level 50 or lower.\p"
-	.string "They also must not hold the same\n"
-	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1}.$"
+BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsLv50::
+	.string "Hold up, challenger!\p"
+	.string "Your squad isn't legal for entry.\p"
+	.string "You need three different POKéMON\n"
+	.string "capped at Level 50.\p"
+	.string "And no duplicate items either.\p"
+	.string "EGGS{STR_VAR_1} aren't allowed.$"
 
-BattleFrontier_BattleArenaLobby_Text_GuideYouToArena:
-	.string "I shall now guide you to\n"
-	.string "the BATTLE ARENA.$"
+BattleFrontier_BattleArenaLobby_Text_GuideYouToArena::
+	.string "Follow me. It’s time to go to the\n"
+	.string "BATTLE ARENA.$"
 
-BattleFrontier_BattleArenaLobby_Text_DidntSaveBeforeShuttingDown:
-	.string "My dear challenger!\p"
-	.string "You did not save the game before\n"
-	.string "shutting down, did you?\p"
-	.string "It is unfortunate, but that has\n"
-	.string "resulted in your disqualification\l"
-	.string "from your challenge.\p"
-	.string "You may, of course, start with a fresh\n"
-	.string "challenge.$"
+BattleFrontier_BattleArenaLobby_Text_DidntSaveBeforeShuttingDown::
+	.string "Yo, challenger!\p"
+	.string "You cut the power without saving,\n"
+	.string "didn't you?\p"
+	.string "That’s a straight disqualification.\n"
+	.string "Rules are rules.\p"
+	.string "If you want another shot, you gotta\n"
+	.string "start the run from zero.$"
 
-BattleFrontier_BattleArenaLobby_Text_CongratsOnSevenWins:
-	.string "We congratulate you for your splendid\n"
-	.string "string of wins over seven TRAINERS!$"
+BattleFrontier_BattleArenaLobby_Text_CongratsOnSevenWins::
+	.string "Rah! Seven wins straight? You\n"
+	.string "absolutely ran the block!$"
 
-BattleFrontier_BattleArenaLobby_Text_RecordAchievement:
-	.string "Your achievement will be recorded.\n"
-	.string "Please wait while I save the game.$"
+BattleFrontier_BattleArenaLobby_Text_RecordAchievement::
+	.string "Gotta get this in the books.\n"
+	.string "Wait while I save the data.$"
 
-@ Unused
-BattleFrontier_BattleArenaLobby_Text_PresentYouWithPrize:
-	.string "In commemoration of your 7-win streak,\n"
-	.string "we present you with this prize.$"
+BattleFrontier_BattleArenaLobby_Text_ThankYouWaitWhileSave::
+	.string "Sick run. Thanks for bringing the heat!\p"
+	.string "Wait while I save your progress.$"
 
-@ Unused
-BattleFrontier_BattleArenaLobby_Text_ReceivedPrize:
-	.string "{PLAYER} received the prize\n"
-	.string "{STR_VAR_1}.$"
+BattleFrontier_BattleArenaLobby_Text_AwaitAnotherChallenge2::
+	.string "We’ll be waiting for your next run!$"
 
-@ Unused
-BattleFrontier_BattleArenaLobby_Text_BagFullReturnForPrize:
-	.string "Oh?\n"
-	.string "Your BAG seems to be full.\p"
-	.string "I urge you to clear space and\n"
-	.string "return for your prize.$"
+BattleFrontier_BattleArenaLobby_Text_LookingForwardToArrivalSaveGame::
+	.string "We’ve been waiting for you to get\n"
+	.string "back in the ring.\p"
+	.string "Gotta save the game before I let\n"
+	.string "you through. Hang tight.$"
 
-BattleFrontier_BattleArenaLobby_Text_ThankYouWaitWhileSave:
-	.string "Thank you so much for participating!\p"
-	.string "Please wait while I save the game.$"
+BattleFrontier_BattleArenaLobby_Text_RecordLastMatch::
+	.string "Want to record that madness on your\n"
+	.string "FRONTIER PASS?$"
 
-BattleFrontier_BattleArenaLobby_Text_AwaitAnotherChallenge2:
-	.string "We await your challenge on\n"
-	.string "another occasion!$"
+BattleFrontier_BattleArenaLobby_Text_BadIdeaToNotAttack::
+	.string "I got robbed by the Ref's decision...\p"
+	.string "Turns out playing it safe and spamming\n"
+	.string "PROTECT doesn't win you the crowd.$"
 
-BattleFrontier_BattleArenaLobby_Text_LookingForwardToArrivalSaveGame:
-	.string "We have been looking forward to\n"
-	.string "your arrival.\p"
-	.string "Before I show you to the BATTLE\n"
-	.string "ARENA, I must save the game.\l"
-	.string "Please wait.$"
+BattleFrontier_BattleArenaLobby_Text_LandingHitsWorked::
+	.string "The Ref called it for me!\p"
+	.string "Just kept swinging until they dropped.\n"
+	.string "Pressure works, man!$"
 
-BattleFrontier_BattleArenaLobby_Text_RecordLastMatch:
-	.string "Shall I record your last BATTLE ARENA\n"
-	.string "match on your FRONTIER PASS?$"
+BattleFrontier_BattleArenaLobby_Text_MatchWasDeclaredDraw::
+	.string "Ref called it a draw.\p"
+	.string "Time ran out and we were both basically\n"
+	.string "running on fumes. Proper stalemate.$"
 
-BattleFrontier_BattleArenaLobby_Text_BadIdeaToNotAttack:
-	.string "I lost on the REFEREE's decision…\p"
-	.string "I don't think it was a good idea to only\n"
-	.string "use defensive moves and not attack…$"
+BattleFrontier_BattleArenaLobby_Text_OrderOfMonsImportant::
+	.string "In this pit, the order of your squad\n"
+	.string "is literally everything.\p"
+	.string "If your lead gets countered, your\n"
+	.string "second better be ready to slide in\l"
+	.string "and settle the score immediately.\p"
+	.string "That's how you build a real lineup.$"
 
-BattleFrontier_BattleArenaLobby_Text_LandingHitsWorked:
-	.string "I won in judging!\p"
-	.string "Landing hits consistently on\n"
-	.string "the opponent's POKéMON worked!$"
+BattleFrontier_BattleArenaLobby_Text_RulesAreListed::
+	.string "The Set KO Tourney manifestos.$"
 
-BattleFrontier_BattleArenaLobby_Text_MatchWasDeclaredDraw:
-	.string "Our match was declared a draw.\p"
-	.string "When we ran out of time, both my\n"
-	.string "POKéMON and the opponent's had about\l"
-	.string "the same amount of HP left.$"
+BattleFrontier_BattleArenaLobby_Text_ReadWhichHeading::
+	.string "Which section you looking at?$"
 
-BattleFrontier_BattleArenaLobby_Text_OrderOfMonsImportant:
-	.string "In the BATTLE ARENA, the order of\n"
-	.string "POKéMON is totally important.\p"
-	.string "For example, if your first POKéMON\n"
-	.string "has certain type disadvantages,\l"
-	.string "try making your second POKéMON one\l"
-	.string "with moves that are super effective\l"
-	.string "against the first one.\p"
-	.string "I think that will be a good way of\n"
-	.string "making an effective team.$"
+BattleFrontier_BattleArenaLobby_Text_ExplainBattleRules::
+	.string "This isn't your standard scrap.\p"
+	.string "First: matches are capped at three\n"
+	.string "turns. No stalling allowed.\p"
+	.string "If nobody's down by turn three, the\n"
+	.string "REFEREE judges who brought more heat.\p"
+	.string "Also: no switching. You fight until\n"
+	.string "it's settled, win or lose.$"
 
-BattleFrontier_BattleArenaLobby_Text_RulesAreListed:
-	.string "The Set KO Tourney's rules are listed.$"
-
-BattleFrontier_BattleArenaLobby_Text_ReadWhichHeading:
-	.string "Which heading do you want to read?$"
-
-BattleFrontier_BattleArenaLobby_Text_ExplainBattleRules:
-	.string "The Set KO Tourney has special rules,\n"
-	.string "unlike standard battles.\p"
-	.string "First, one battle lasts only\n"
-	.string "three turns.\p"
-	.string "If the outcome is not decided after\n"
-	.string "three turns, it goes to judging.\p"
-	.string "The REFEREE will choose the winner\n"
-	.string "based on how the POKéMON battled.\p"
-	.string "Also, a POKéMON cannot be switched out\n"
-	.string "until its battle's outcome is decided.$"
-
-BattleFrontier_BattleArenaLobby_Text_ExplainMindRules:
-	.string "The first judging factor is “Mind.”\n"
-	.string "This factor evaluates how aggressive\l"
-	.string "the battlers were.\p"
-	.string "The judging is based on how often\n"
-	.string "the TRAINERS ordered the use of\l"
+BattleFrontier_BattleArenaLobby_Text_ExplainMindRules::
+	.string "Factor one is 'Mind.'\n"
+	.string "This is about aggression.\p"
+	.string "The Ref looks at how many times you\n"
+	.string "actually tried to take 'em out with\l"
 	.string "offensive moves.$"
 
-BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules:
-	.string "The second judging factor is “Skill.”\n"
-	.string "This factor evaluates how effectively\l"
-	.string "POKéMON moves were used.\p"
-	.string "If a move worked successfully,\n"
-	.string "the Skill rating goes up.\p"
-	.string "If a move failed, the Skill rating\n"
-	.string "is lowered.\p"
-	.string "If it was an offensive move, the Skill\n"
-	.string "rating goes up if the move was “super\l"
-	.string "effective” and goes down if it was\l"
-	.string "“not very effective.”\p"
-	.string "The Skill rating will not go up for\n"
-	.string "moves such as PROTECT and DETECT.\p"
-	.string "If the opponent used PROTECT or\n"
-	.string "DETECT, and your POKéMON failed to\l"
-	.string "hit with a move, its Skill rating will not\l"
-	.string "go down.$"
+BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules::
+	.string "Factor two is 'Skill.'\n"
+	.string "This is about efficiency.\p"
+	.string "If your moves connect, your rating goes\n"
+	.string "up. If you whiff, it drops.\p"
+	.string "Super effective hits are big points.\n"
+	.string "Not very effective? That's a deduction.\p"
+	.string "And don't think you can farm points\n"
+	.string "with PROTECT. That won't fly here.\p"
+	.string "But if the opp uses PROTECT and you\n"
+	.string "miss, the Ref won't penalize you.$"
 
-BattleFrontier_BattleArenaLobby_Text_ExplainBodyRules:
-	.string "The third judging factor is “Body.”\n"
-	.string "This factor is based on how much HP\l"
-	.string "remained at the end of a battle.\p"
-	.string "The rating takes into account how much\n"
-	.string "HP a POKéMON had at the start of\l"
-	.string "battle, and what remained at the end.$"
+BattleFrontier_BattleArenaLobby_Text_ExplainBodyRules::
+	.string "Factor three is 'Body.'\n"
+	.string "This is pure durability.\p"
+	.string "It’s a simple check of your HP at the\n"
+	.string "end compared to what you started with.$"
 
-BattleFrontier_BattleArenaLobby_Text_CongratsOnDefeatingTycoon:
-	.string "A victory snatched from the ARENA\n"
-	.string "TYCOON, and a seven-TRAINER sweep!\p"
-	.string "We congratulate you on your most\n"
-	.string "splendid challenge!$"
+BattleFrontier_BattleArenaLobby_Text_CongratsOnDefeatingTycoon::
+	.string "You actually took it to the TYCOON\n"
+	.string "and finished the sweep!\p"
+	.string "That was straight up legendary!$"
 
-BattleFrontier_BattleArenaLobby_Text_PleaseAcceptBattlePoints:
-	.string "My dear challenger, in recognition of\n"
-	.string "your indefatigable spirit, please\l"
-	.string "accept these Battle Point(s).$"
+BattleFrontier_BattleArenaLobby_Text_PleaseAcceptBattlePoints::
+	.string "Yo, challenger—for showing that kind\n"
+	.string "of heart in the pit, take these\l"
+	.string "Battle Points. You earned 'em.$"
+

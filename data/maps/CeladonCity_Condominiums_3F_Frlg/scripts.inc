@@ -52,44 +52,54 @@ CeladonCity_Condominiums_3F_EventScript_Computer3::
 	end
 
 CeladonCity_Condominiums_3F_Text_ImTheProgrammer::
-	.string "Me?\n"
-	.string "I'm the programmer!$"
+	.string "Listen, I’m the one coding the ends.\n"
+	.string "One wrong line and the whole ends\l"
+	.string "get dashed, you get me?\p"
+	.string "Man’s really out here making sure\n"
+	.string "the map don't glitch out.$"
 
 CeladonCity_Condominiums_3F_Text_ImTheGraphicArtist::
-	.string "I'm the graphic artist!\n"
-	.string "I drew you!$"
+	.string "I’m the one making everything look\n"
+	.string "cold. I designed your whole fit!\p"
+	.string "You’re looking proper sharp because\n"
+	.string "I put in the work. Lowkey iconic.$"
 
 CeladonCity_Condominiums_3F_Text_IWroteTheStory::
-	.string "I wrote the story!\n"
-	.string "Isn't ERIKA cute?\p"
-	.string "I like MISTY a lot, too!\n"
-	.string "Oh, and SABRINA, I like her!$"
+	.string "I’m the one who wrote the script.\n"
+	.string "I decided you were the main man!\p"
+	.string "I even gave that old man in Viridian\n"
+	.string "too much juice so he’d block the way.\l"
+	.string "Pure jokes, innit?$"
 
 CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex::
-	.string "Is that right?\p"
-	.string "I'm the game designer!\p"
-	.string "Filling up your POKéDEX is tough,\n"
-	.string "but don't quit!\p"
-	.string "When you finish, come tell me!$"
+	.string "Safe, I’m the big boss designer.\n"
+	.string "I built this whole bits from scratch.\p"
+	.string "You think you’re a top boy?\n"
+	.string "Go catch every single mon in the\l"
+	.string "ends and come holla at me.$"
 
 CeladonCity_Condominiums_3F_Text_CompletedPokedexCongratulations::
-	.string "Wow! Excellent!\n"
-	.string "You completed your POKéDEX!\l"
-	.string "Congratulations!\l"
-	.string "…$"
+	.string "Mad! You’ve actually done it!\n"
+	.string "You’ve bagged every single mon!\l"
+	.string "Real talk, that’s legendary.\p"
+	.string "Take this certificate. Let everyone\n"
+	.string "know you’re the realest!$"
 
 CeladonCity_Condominiums_3F_Text_ItsTheGameProgram::
-	.string "It's the game program! Messing with\n"
-	.string "it could bug out the game!$"
+	.string "The screen is moving bare fast.\n"
+	.string "It’s the source code for the ends.\l"
+	.string "Don't touch it, you’ll tech the game!$"
 
 CeladonCity_Condominiums_3F_Text_SomeonesPlayingGame::
-	.string "Someone's playing a game instead of\n"
-	.string "working!$"
+	.string "Man’s on his break playing games\n"
+	.string "instead of working. Movin' lazy!$"
 
 CeladonCity_Condominiums_3F_Text_ItsScriptBetterNotLookAtEnding::
-	.string "It's the script!\n"
-	.string "Better not look at the ending!$"
+	.string "It’s the script for the final scene.\n"
+	.string "Don't look, man! You'll bait out\l"
+	.string "the whole ending!$"
 
 CeladonCity_Condominiums_3F_Text_GameFreakDevelopmentRoom::
-	.string "GAME FREAK Development Room$"
+	.string "GAME FREAK HQ\n"
+	.string "Authorized Man dem Only$"
 

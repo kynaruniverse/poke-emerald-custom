@@ -14,9 +14,9 @@ CeladonCity_DepartmentStore_1F_EventScript_FloorSign::
 	end
 
 CeladonCity_DepartmentStore_1F_Text_WelcomeToDeptStore::
-	.string "Hello!\n"
-	.string "Welcome to CELADON DEPT. STORE.\p"
-	.string "The board on the right describes\n"
+	.string "Whats good!\n"
+	.string "Your at the CELADON DEPT. STORE.\p"
+	.string "That board on the right Shows\n"
 	.string "the store layout.$"
 
 CeladonCity_DepartmentStore_1F_Text_FloorDescriptions::

@@ -22,20 +22,20 @@ AbandonedShip_CaptainsOffice_EventScript_ThisIsSSCactus::
 	release
 	end
 
-AbandonedShip_CaptainsOffice_Text_NoSuccessFindingScanner:
-	.string "I'm investigating this ship on behalf\n"
-	.string "of CAPT. STERN.\p"
-	.string "He also asked me to find a SCANNER,\n"
-	.string "but I haven't had any success…$"
+AbandonedShip_CaptainsOffice_Text_NoSuccessFindingScanner::
+	.string "I’m out here doing shifts for STERN,\n"
+	.string "but this place is a bin.\p"
+	.string "He’s onto me about some SCANNER thing,\n"
+	.string "but I haven't seen a thing. Stressful.$"
 
-AbandonedShip_CaptainsOffice_Text_OhCanYouDeliverScanner:
-	.string "Oh! That's a SCANNER!\p"
-	.string "Listen, can I get you to deliver that\n"
-	.string "to CAPT. STERN?\p"
-	.string "I want to investigate this ship a\n"
-	.string "little more.$"
+AbandonedShip_CaptainsOffice_Text_OhCanYouDeliverScanner::
+	.string "Wait, you actually found it?\p"
+	.string "Listen, do me a solid and take that\n"
+	.string "to STERN yourself, yeah?\p"
+	.string "I’m gonna stay here and... uh... keep\n"
+	.string "investigating. Definitely not napping.$"
 
-AbandonedShip_CaptainsOffice_Text_ThisIsSSCactus:
-	.string "This ship is called S.S. CACTUS.\n"
-	.string "It seems to be from an earlier era.$"
+AbandonedShip_CaptainsOffice_Text_ThisIsSSCactus::
+	.string "The S.S. CACTUS. Ancient tech, fam.\n"
+	.string "Proper old school.$"
 

@@ -34,6 +34,7 @@ BattleFrontier_BattleDomeCorridor_EventScript_WalkToBattleRoomLvOpen::
 	waitmovement 0
 	closedoor 37, 3
 	waitdooranim
+
 BattleFrontier_BattleDomeCorridor_EventScript_WarpToPreBattleRoom::
 	waitmovement 0
 	setvar VAR_0x8006, 0
@@ -129,7 +130,6 @@ BattleFrontier_BattleDomeCorridor_Movement_AttendantEnterDoorLvOpen:
 	set_invisible
 	step_end
 
-@ Unused
 BattleFrontier_BattleDomeCorridor_Movement_WalkToBattleRoomMidRight:
 	walk_up
 	walk_right
@@ -147,3 +147,4 @@ BattleFrontier_BattleDomeCorridor_Movement_WalkToBattleRoomMidRight:
 	walk_up
 	set_invisible
 	step_end
+

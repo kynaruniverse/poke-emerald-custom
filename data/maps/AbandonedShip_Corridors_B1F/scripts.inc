@@ -53,34 +53,33 @@ AbandonedShip_Corridors_B1F_EventScript_Duncan::
 	msgbox AbandonedShip_Corridors_B1F_Text_DuncanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-AbandonedShip_Corridors_B1F_Text_DuncanIntro:
-	.string "When we go out to sea, we SAILORS\n"
-	.string "always bring our POKéMON.\l"
-	.string "How about a quick battle?$"
+AbandonedShip_Corridors_B1F_Text_DuncanIntro::
+	.string "Look, if you're coming down here,\n"
+	.string "you better have your POKéMON ready.\l"
+	.string "Let’s see if you can handle yourself.$"
 
-AbandonedShip_Corridors_B1F_Text_DuncanDefeat:
-	.string "Whoops, I'm sunk!$"
+AbandonedShip_Corridors_B1F_Text_DuncanDefeat::
+	.string "Fair play, you've got some fight\n"
+	.string "in you.$"
 
-AbandonedShip_Corridors_B1F_Text_DuncanPostBattle:
-	.string "The ship's bottom has sunk into the\n"
-	.string "depths.\p"
-	.string "If a POKéMON knew how to go underwater,\n"
-	.string "we might make some progress…$"
+AbandonedShip_Corridors_B1F_Text_DuncanPostBattle::
+	.string "The bottom of this crate is underwater.\p"
+	.string "Unless your POKéMON knows how to dive\n"
+	.string "deep, you aren't making no progress.$"
 
-AbandonedShip_Corridors_B1F_Text_YayItsAShip:
-	.string "Yay!\n"
-	.string "It's a ship!$"
+AbandonedShip_Corridors_B1F_Text_YayItsAShip::
+	.string "Mad... it’s actually an entire ship\n"
+	.string "just rotting away down here.$"
 
-AbandonedShip_Corridors_B1F_Text_DoorIsLocked:
-	.string "The door is locked.\p"
-	.string "“STORAGE” is painted on the door.$"
+AbandonedShip_Corridors_B1F_Text_DoorIsLocked::
+	.string "It's locked tight.\p"
+	.string "“STORAGE” is tagged on the front.$"
 
-AbandonedShip_Corridors_B1F_Text_InsertedStorageKey:
-	.string "{PLAYER} inserted and turned the\n"
-	.string "STORAGE KEY.\p"
-	.string "The inserted KEY stuck fast,\n"
-	.string "but the door opened.$"
+AbandonedShip_Corridors_B1F_Text_InsertedStorageKey::
+	.string "{PLAYER} jammed the STORAGE KEY in.\p"
+	.string "The KEY’s stuck now, but the door\n"
+	.string "finally gave way.$"
 
-AbandonedShip_Text_TheDoorIsOpen:
-	.string "The door is open.$"
+AbandonedShip_Text_TheDoorIsOpen::
+	.string "The door's open.$"
 
