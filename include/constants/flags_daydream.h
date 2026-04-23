@@ -1,0 +1,62 @@
+#ifndef GUARD_CONSTANTS_FLAGS_DAYDREAM_H
+#define GUARD_CONSTANTS_FLAGS_DAYDREAM_H
+
+// ============================================================
+// Pokémon Daydream Version — Custom Flag Definitions
+// Uses the 0x0500–0x05FF range (256 flags reserved for Daydream).
+// Verify this range is free in flags.h before shipping.
+// ============================================================
+
+#define FLAG_DAYDREAM_BASE              0x0500
+
+// ---- Wardrobe unlock flags (one per outfit) ----
+#define FLAG_OUTFIT_APRON               (FLAG_DAYDREAM_BASE + 0x00)
+#define FLAG_OUTFIT_BAKER_HAT           (FLAG_DAYDREAM_BASE + 0x01)
+#define FLAG_OUTFIT_CAMP_TOP            (FLAG_DAYDREAM_BASE + 0x02)
+#define FLAG_OUTFIT_CAMP_BOTTOM         (FLAG_DAYDREAM_BASE + 0x03)
+#define FLAG_OUTFIT_CAMP_SHOES          (FLAG_DAYDREAM_BASE + 0x04)
+#define FLAG_OUTFIT_NEON_JACKET         (FLAG_DAYDREAM_BASE + 0x05)
+#define FLAG_OUTFIT_HOLLOW_CLOAK        (FLAG_DAYDREAM_BASE + 0x06)
+#define FLAG_OUTFIT_PINE_SCARF          (FLAG_DAYDREAM_BASE + 0x07)
+// ... expand up to FLAG_DAYDREAM_BASE + 0x3F (64 outfit flags)
+
+// ---- Quest completion flags ----
+#define FLAG_QUEST_BAKERY_RUN_DONE      (FLAG_DAYDREAM_BASE + 0x40)
+#define FLAG_QUEST_LOST_CAT_DONE        (FLAG_DAYDREAM_BASE + 0x41)
+#define FLAG_QUEST_LIGHTHOUSE_DONE      (FLAG_DAYDREAM_BASE + 0x42)
+#define FLAG_QUEST_MOSSREACH_DONE       (FLAG_DAYDREAM_BASE + 0x43)
+#define FLAG_QUEST_PHOTOSHOOT_DONE      (FLAG_DAYDREAM_BASE + 0x44)
+#define FLAG_QUEST_CINDERPINE_DONE      (FLAG_DAYDREAM_BASE + 0x45)
+#define FLAG_QUEST_HOLLOW_PILGRIM_DONE  (FLAG_DAYDREAM_BASE + 0x46)
+#define FLAG_QUEST_INN_RECIPE_DONE      (FLAG_DAYDREAM_BASE + 0x47)
+#define FLAG_QUEST_TIBBS_NAP_DONE       (FLAG_DAYDREAM_BASE + 0x48)
+#define FLAG_QUEST_DREAM_ANTLER_DONE    (FLAG_DAYDREAM_BASE + 0x49)
+#define FLAG_QUEST_COMEDY_MASK_DONE     (FLAG_DAYDREAM_BASE + 0x4A)
+#define FLAG_QUEST_WARDROBE_GAUNTLET    (FLAG_DAYDREAM_BASE + 0x4B)
+#define FLAG_QUEST_NEEDS_MASTER_DONE    (FLAG_DAYDREAM_BASE + 0x4C)
+#define FLAG_QUEST_PROCGEN_DEPTH_DONE   (FLAG_DAYDREAM_BASE + 0x4D)
+#define FLAG_QUEST_OUTSIDER_DONE        (FLAG_DAYDREAM_BASE + 0x4E)
+#define FLAG_QUEST_REGIONAL_FORMS_DONE  (FLAG_DAYDREAM_BASE + 0x4F)
+#define FLAG_QUEST_GHOST_GREY_DONE      (FLAG_DAYDREAM_BASE + 0x50)
+#define FLAG_QUEST_STRIKE_BREAKER_DONE  (FLAG_DAYDREAM_BASE + 0x51)
+#define FLAG_QUEST_DAYDREAMER_DONE      (FLAG_DAYDREAM_BASE + 0x52)
+
+// ---- Story gate flags ----
+#define FLAG_STORY_ACT1_COMPLETE        (FLAG_DAYDREAM_BASE + 0x60)
+#define FLAG_STORY_ACT2_COMPLETE        (FLAG_DAYDREAM_BASE + 0x61)
+#define FLAG_STORY_ACT3_COMPLETE        (FLAG_DAYDREAM_BASE + 0x62)
+#define FLAG_HORROR_ARC_STARTED         (FLAG_DAYDREAM_BASE + 0x63)
+#define FLAG_TEAM_SNOOZE_REVEALED       (FLAG_DAYDREAM_BASE + 0x64)
+#define FLAG_CHAMPION_VEX_RETURNED      (FLAG_DAYDREAM_BASE + 0x65)
+
+// ---- Camp flags ----
+#define FLAG_CAMP_TUTORIAL_DONE         (FLAG_DAYDREAM_BASE + 0x70)
+#define FLAG_BEDROLL_OBTAINED           (FLAG_DAYDREAM_BASE + 0x71)
+
+// ---- NPC / event flags ----
+#define FLAG_PROF_MIM_INTRO_DONE        (FLAG_DAYDREAM_BASE + 0x80)
+#define FLAG_TIBB_INTRO_DONE            (FLAG_DAYDREAM_BASE + 0x81)
+#define FLAG_INNKEEPER_MET              (FLAG_DAYDREAM_BASE + 0x82)
+#define FLAG_PATTY_MET                  (FLAG_DAYDREAM_BASE + 0x83)
+
+#endif // GUARD_CONSTANTS_FLAGS_DAYDREAM_H
