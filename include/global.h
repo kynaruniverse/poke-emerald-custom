@@ -26,6 +26,10 @@
 #include "constants/moves.h"
 #include "config/save.h"
 
+// Pokémon Daydream forward declarations (safe for SaveBlock extensions)
+struct WardrobeState;
+struct QuestLogState;
+
 // Prevent cross-jump optimization.
 #define BLOCK_CROSS_JUMP asm("");
 
