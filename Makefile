@@ -1,5 +1,7 @@
 GAME_VERSION ?= EMERALD
-TITLE        ?= POKEMON EMER
+# Daydream: ROM header rebrand. 12-char limit on TITLE field.
+# GAME_CODE intentionally left as BPEE to preserve expansion save/patch compatibility.
+TITLE        ?= POKEDAYDREAM
 GAME_CODE    ?= BPEE
 BUILD_NAME   ?= emerald
 MAP_VERSION  ?= emerald
