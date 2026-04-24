@@ -352,3 +352,203 @@ The Daydream aesthetic relies heavily on its sleepy, lo-fi, acoustic soundtrack.
 ---
 
 *End of TASKS.md. Once these items are completed, the Pokémon Daydream ROM hack will be fully playable and feature-complete.*
+
+---
+
+## 3. Map Design & Layouts
+
+The new region of Reverie requires custom maps to bring its unique locations to life. All map design should be done using Porymap.
+
+### 3.1 Town and Route Maps
+
+**Task:** Build the physical world of Daydream using Porymap.
+
+**Detailed Map Descriptions & Visual Cues:**
+
+*   **Hush Harbor (Start Town):** A sleepy, foggy seaside town. The architecture should be quaint and slightly weathered, with cobblestone streets and small, cozy houses. The color palette should feature muted blues, grays, and soft greens. Key locations include the player's home and Prof. Mim's lab (which might look slightly disorganized and filled with dream-related research equipment).
+*   **Route 1 (Yawn Path):** A gentle, sloping path with tall, swaying grasses. The environment should feel peaceful and inviting, perhaps with soft, warm lighting. This is where the player encounters their first wild Pokémon and learns about the Needs system.
+*   **Loafsbury:** A bustling town known for its bakeries. The air should seem thick with the smell of fresh bread. The architecture could feature warm, earthy tones (browns, oranges, yellows) and perhaps some subtle bakery-themed decorations (e.g., signs shaped like loaves of bread). This is where the player encounters the first Wardrobe shop and the "A Yeasty Errand" quest.
+*   **Route 2 (Crumb Trail):** A forest path with scattered breadcrumbs (perhaps a visual motif or actual items to collect). The environment should be slightly more dense and mysterious than Route 1, with dappled sunlight filtering through the trees. This route leads to the first optional procedural dungeon entry.
+*   **Mossreach:** Overgrown ruins reclaimed by nature. The architecture should be ancient and crumbling, covered in moss and vines. The color palette should be dominated by deep greens and earthy browns. This location introduces the horror-arc kickoff NPC and has a slightly eerie, quiet atmosphere.
+*   **Static City:** A comedic mega-city with neon lights and a slightly chaotic layout. The architecture should be modern and perhaps a bit exaggerated, with towering buildings and bright, flashing signs. This is the hub for the Quest board and a Battle Tower-lite facility.
+*   **Route 5 (Hum Highway):** A path running alongside power lines, with a constant, low hum in the background. The environment might be slightly more industrial or barren, with sparse vegetation and a focus on the electrical infrastructure. This route serves as a shortcut into the northern map.
+*   **Cinderpine:** A volcanic pine forest. The environment should feature dark, charred earth, towering pine trees, and perhaps occasional small, harmless volcanic vents or ash falls. The color palette should include deep reds, oranges, and blacks. This location serves as the camp and shelter tutorial.
+*   **Glasswake:** A frozen lake town. The architecture should be sturdy and insulated, perhaps with ice sculptures or frozen fountains. The color palette should be dominated by icy blues, whites, and pale grays. This location is where late-game evolutions trigger and features the horror-arc midpoint (the lighthouse).
+*   **The Hollow:** The endgame procedural mega-dungeon. The entrance should be imposing and mysterious, perhaps a dark cave or a swirling vortex. The interior (generated procedurally) should feel alien and unsettling, with strange architecture and a sense of deep, ancient power. This is where outsider Pokémon and regional forms are found.
+
+**Steps for Map Creation:**
+1.  **Porymap Setup:** Open the project in Porymap.
+2.  **Map Creation:** For each location listed above, create a new map folder under `data/maps/<MapName>/` (e.g., `data/maps/HushHarbor/`). This folder should contain `header.inc`, `scripts.inc`, `text.inc`, and `map.json`.
+3.  **Layout Design:** Create the physical layout for each map under `data/layouts/<LayoutName>/` (e.g., `data/layouts/HushHarbor/`). This includes designing the terrain, placing buildings, and setting up the overall structure. Save the layout data as `border.bin`, `map.bin`, and `layout.json`.
+4.  **Tileset Assignment:** Assign appropriate tilesets to each map to achieve the desired visual aesthetic (e.g., foggy seaside for Hush Harbor, dense forest for Cinderpine).
+5.  **Object Placement:** Place NPC objects, items, and interactive elements (e.g., signs, doors) on the maps. Assign the corresponding scripts (e.g., `LoafsburyPatty`, `ProfMim_Intro`) to these objects.
+6.  **Connections:** Wire the connections between maps in `connections.inc` to ensure seamless transitions between locations.
+7.  **Encounters:** Add wild Pokémon encounters for each route and dungeon in `src/data/wild_encounters.json`.
+
+**Dependencies:** Porymap.
+
+### 3.2 Procgen Dungeon Template
+
+The procedural dungeon system requires a blank template map to serve as the canvas for the generated layouts.
+
+**Task:** Create the 32x32 template map for `GenerateProcDungeon()`.
+
+**Detailed Description & Visual Cues:**
+
+*   **Template Map:** A completely blank 32x32 map filled entirely with wall tiles. This map will be dynamically overwritten by the procedural generation algorithm.
+*   **Tileset:** The tileset used for this template should contain the necessary tiles for the procedural dungeons (e.g., walls, floors, doors, stairs up, stairs down, chests). The specific visual style of these tiles can vary depending on the dungeon's theme (e.g., ancient ruins, icy caverns, volcanic tunnels).
+
+**Steps for Implementation:**
+1.  **Map Creation:** In Porymap, create a new 32x32 map named `ProcDungeon_Template`.
+2.  **Fill with Walls:** Fill the entire map with the designated wall tile from the chosen tileset.
+3.  **Tile ID Identification:** Note the exact tile IDs used for Wall, Floor, Door, Stairs Up, Stairs Down, and Chest in the chosen tileset.
+4.  **Constant Update:** Update the `TILE_*` constants in `include/procgen_dungeon.h` to match the identified tile IDs. This ensures the procedural generation algorithm uses the correct tiles when building the dungeon.
+
+**Dependencies:** Porymap.
+
+---
+
+## 4. Engine Hooks & Integration
+
+This section details the manual code edits required to integrate the new systems into the core Pokémon Emerald engine. These edits are crucial for the systems to function correctly and are provided with explicit instructions to ensure accuracy.
+
+### 4.1 Apply Manual Patch Instructions
+
+Several core engine files require manual edits that cannot be safely automated via script without risking syntax errors. Detailed markdown guides have been provided for each necessary patch, and you should follow them precisely.
+
+**Task:** Follow the markdown guides in `docs/daydream/` to patch the engine.
+
+**Detailed Instructions:**
+
+1.  **Save Blocks (`global.h` and `load_save.c`):**
+    *   **File:** `include/global.h`
+    *   **Purpose:** Add the new `WardrobeState`, `NeedsState`, and `QuestLogState` structs to `SaveBlock1` and `SaveBlock2`, ensuring player progress is saved correctly.
+    *   **Action:** Refer to `docs/daydream/manifest_global_h_save_c.md` for exact `FIND` and `REPLACE` blocks to modify `struct SaveBlock1` and `struct SaveBlock2` definitions.
+    *   **File:** `src/load_save.c`
+    *   **Purpose:** Implement save migration logic to handle older save files that do not contain the new data structures. This ensures backward compatibility and proper initialization of new fields.
+    *   **Action:** Refer to `docs/daydream/manifest_global_h_save_c.md` for exact `FIND` and `REPLACE` blocks to modify the save loading and migration functions.
+
+2.  **Start Menu (`start_menu.c`):**
+    *   **File:** `src/start_menu.c`
+    *   **Purpose:** Add the "WARDROBE" and "JOURNAL" options to the Start Menu, allowing players to access these new systems.
+    *   **Action:** Refer to `docs/daydream/manifest_start_menu.md` for exact `FIND` and `REPLACE` blocks to modify `BuildStartMenuActions_Normal()` and `sStartMenuItems[]`.
+
+3.  **Option Menu (`option_menu.c`):**
+    *   **File:** `src/option_menu.c`
+    *   **Purpose:** Add the "Perfect Stats" toggle to the Options menu, allowing players to enable or disable this feature.
+    *   **Action:** Refer to `docs/daydream/manifest_option_menu.md` for exact `FIND` and `REPLACE` blocks to modify `sOptionMenuItems[]` and the option handling logic.
+
+4.  **Soft Scaling (`battle_setup.c`):**
+    *   **File:** `src/battle_setup.c`
+    *   **Purpose:** Hook the `ScaleLevel()` function into the trainer party creation logic, ensuring opponent levels scale dynamically based on story progression.
+    *   **Action:** Refer to `docs/daydream/manifest_battle_setup.md` for exact `FIND` and `REPLACE` blocks to modify `CreateNPCTrainerPartyForTrainer()`.
+
+5.  **Needs Decay (`field_control_avatar.c`):**
+    *   **File:** `src/field_control_avatar.c`
+    *   **Purpose:** Hook the `NeedsTickOnStep()` function into the player's movement logic, causing Needs to decay over time as the player explores the world.
+    *   **Action:** Refer to `docs/daydream/manifest_field_control_avatar.md` for exact `FIND` and `REPLACE` blocks to modify the player step handling function (e.g., `PlayerStep`).
+
+6.  **Evolution Methods (`pokemon.c`):**
+    *   **File:** `src/pokemon.c`
+    *   **Purpose:** Add the logic for the 6 new Daydream evolution methods (e.g., `EVO_LEVEL_NIGHT_HIGH_FRIENDSHIP`, `EVO_LEVEL_SLEEP`) to the `GetEvolutionTargetSpecies()` function.
+    *   **Action:** Refer to `docs/daydream/manifest_pokemon_c_evolution.md` for exact `FIND` and `REPLACE` blocks to extend the `switch` statement within `GetEvolutionTargetSpecies()`.
+
+7.  **Build System (`Makefile`):**
+    *   **File:** `Makefile` (at the project root)
+    *   **Purpose:** Update the ROM title to "POKEMON DAYDREAM" and include all the new `src/daydream/*.c` files in the compilation process.
+    *   **Action:** Refer to `docs/daydream/manifest_makefile.md` for exact `FIND` and `REPLACE` blocks to modify the `ROM_NAME` variable and add new source file paths.
+
+**Dependencies:** Text editor, C programming knowledge.
+
+### 4.2 Procgen Dungeon Map Blitting
+
+The `BlitTilesToMap()` function in `src/daydream/procgen_dungeon.c` is currently a stub. It needs to be implemented to write the generated tile buffer to the active map layout.
+
+**Task:** Write the generated tile buffer to the active map layout.
+
+**Detailed Instructions:**
+
+1.  **Access Layout Data:** In `src/daydream/procgen_dungeon.c`, within the `BlitTilesToMap()` function, access the current map's layout data via `gMapHeader.mapLayout->map`.
+2.  **Iterate and Overwrite:** Iterate through the 32x32 `sTiles` array (which contains the procedurally generated dungeon layout). For each tile, overwrite the corresponding metatile ID in the layout data (`gMapHeader.mapLayout->map`) with the value from `sTiles`.
+3.  **Refresh Screen:** After overwriting the layout data, call `DrawWholeMapView()` to refresh the screen and display the newly generated dungeon layout.
+
+**Dependencies:** C programming knowledge, understanding of the Pokémon Emerald map rendering system.
+
+### 4.3 Needs Simulator Battle Hooks
+
+The Needs system requires hooks in the battle engine to apply damage and accuracy modifiers based on the Pokémon's current Needs state.
+
+**Task:** Apply the Needs modifiers during damage calculation and move execution.
+
+**Detailed Instructions:**
+
+1.  **Damage Calculation:** In `src/battle_util.c` (or `src/pokemon.c`), locate the damage calculation function (e.g., `CalculateBaseDamage`). Wrap the final calculated damage value with a call to `ApplyNeedsDamageModifier(damage, attackerPartyIndex)`. This function (defined in `src/daydream/pokemon_needs.c`) will adjust the damage based on the attacker's Hunger level (e.g., +5% damage if Thriving, -10% damage if Suffering).
+2.  **Accuracy Modifier:** In the move execution loop (likely in `src/battle_script_commands.c` or similar), check the attacker's Attention level using `GetNeedState(attacker, NEED_ATTENTION)`. If the state is `NEED_RESTLESS` (or lower), apply a -3% accuracy penalty to the first move used in the battle.
+3.  **Turn Skipping (Groggy):** In the turn start loop (likely in `src/battle_main.c` or similar), check if the attacker is groggy using a custom function (e.g., `NeedsIsGroggy(attacker)`). This function should return true if the Pokémon's Rest level is critically low. If true, skip the Pokémon's turn and display a message (e.g., "{Mon} is too groggy to move!").
+
+**Dependencies:** C programming knowledge, understanding of the Pokémon Emerald battle engine.
+
+### 4.4 Perfect Stats EV Spread Table
+
+The Perfect Stats option currently sets IVs to 31 but lacks a sensible EV spread. A per-species EV spread table is needed to provide appropriate stat boosts.
+
+**Task:** Implement a per-species EV spread table for the Perfect Stats toggle.
+
+**Detailed Instructions:**
+
+1.  **Create Header:** Create a new header file `src/data/perfect_ev_spreads.h`.
+2.  **Define Table:** Define an array mapping each species ID to a 6-byte EV spread. For example, a physical sweeper might have an EV spread of 252 Attack, 252 Speed, and 4 HP.
+    ```c
+    // Example structure
+    struct PerfectEVSpread {
+        u8 hp;
+        u8 atk;
+        u8 def;
+        u8 speed;
+        u8 spatk;
+        u8 spdef;
+    };
+
+    const struct PerfectEVSpread gPerfectEVSpreads[NUM_SPECIES] = {
+        [SPECIES_BULBASAUR] = { .hp = 4, .atk = 0, .def = 0, .speed = 252, .spatk = 252, .spdef = 0 },
+        // ... entries for all species
+    };
+    ```
+3.  **Apply EVs:** In `src/pokemon.c`, within the `CreateMon()` function, read this table and apply the corresponding EVs if `gSaveBlock2Ptr->optionsPerfectStats` is true. Use `SetMonData()` to set the EV values for the newly created Pokémon.
+
+**Dependencies:** C programming knowledge, understanding of Pokémon stats and competitive EV spreads.
+
+---
+
+## 5. Audio & Music
+
+This section details the creation and integration of custom music tracks to establish the unique atmosphere of the Daydream world. The audio should complement the sleepy, lo-fi, and comedic tone of the ROM hack.
+
+### 5.1 Custom Background Music (BGM)
+
+The Daydream aesthetic relies heavily on its sleepy, lo-fi, acoustic soundtrack. Custom music is essential to set the tone for the different locations and encounters.
+
+**Task:** Compose and insert custom music tracks for various in-game locations and situations.
+
+**Detailed Descriptions & Visual Cues:**
+
+*   **Hush Harbor Theme:** A slow, gentle acoustic guitar melody with soft, atmospheric pads. It should evoke the feeling of waking up on a foggy, peaceful morning. Think lo-fi hip-hop beats meets gentle folk music, with a slightly melancholic undertone.
+*   **Loafsbury Theme:** A slightly more upbeat, cheerful tune, perhaps featuring a light piano or accordion melody. It should feel warm and bustling, like a busy bakery, with a hint of playful whimsy. Imagine a jaunty, almost cartoonish, but still mellow, tune.
+*   **The Hollow Theme:** A dark, ambient track with low, resonant drones and occasional unsettling, dissonant chords. It should create a sense of unease and ancient mystery, with subtle ghostly whispers or echoes. This track should be genuinely atmospheric and slightly unnerving, contrasting the game's usual comedic tone.
+*   **Battle Theme (Standard):** A more energetic track, but still maintaining the lo-fi, acoustic aesthetic. It shouldn't be overly aggressive or intense, but rather a lively, rhythmic tune that feels like a friendly, albeit competitive, sparring match. Percussion should be light, perhaps using hand drums or shakers.
+*   **Battle Theme (Boss/Horror):** A tense, driving track with heavier percussion and perhaps some distorted or reversed elements to heighten the sense of danger and urgency. This theme should be reserved for critical story battles or encounters within The Hollow, providing a stark contrast to the standard battle theme.
+
+**Steps for Implementation:**
+1.  **Composition:** Compose the music tracks using a MIDI sequencer or digital audio workstation (DAW). Ensure the compositions adhere to the limitations of the GBA sound engine (e.g., limited channels, specific instrument samples, polyphony). Focus on melodies that are memorable but not overly complex.
+2.  **Conversion:** Convert the composed tracks to `.mid` format. Use the `mid2agb` tool (located in the `tools/` directory of the repository) to convert the `.mid` files into a format compatible with the Pokémon Emerald sound engine (`.s` assembly files). The `mid2agb` tool's usage is typically `mid2agb <input.mid> <output.s>`.
+3.  **Integration:**
+    *   Place the converted `.s` files in the appropriate directory (e.g., `sound/songs/`).
+    *   Update `include/constants/songs.h` to define new song IDs for the custom tracks. Ensure these IDs are unique and follow the existing numbering scheme.
+    *   Update the map headers (`data/maps/<MapName>/header.inc`) to use the new song IDs for the respective locations. For example, in `data/maps/HushHarbor/header.inc`, change the `music` field to your new Hush Harbor theme ID.
+    *   Update the battle music logic (likely in `src/battle_main.c` or similar) to use the new battle themes for standard and boss encounters. This may involve modifying `SetBattleMusic()` or similar functions based on battle type or location.
+
+**Dependencies:** MIDI sequencer/DAW (e.g., LMMS, GarageBand, FL Studio), `mid2agb` tool, understanding of the GBA sound engine's capabilities and limitations.
+
+---
+
+*End of TASKS.md. Once these items are completed, the Pokémon Daydream ROM hack will be fully playable and feature-complete.*
