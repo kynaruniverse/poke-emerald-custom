@@ -25,6 +25,8 @@
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "config/save.h"
+#include "wardrobe.h"
+#include "quest_log_custom.h"
 
 // Prevent cross-jump optimization.
 #define BLOCK_CROSS_JUMP asm("");
@@ -617,9 +619,13 @@ struct SaveBlock2
     /*0x21C*/ struct RankingHall1P hallRecords1P[HALL_FACILITIES_COUNT][FRONTIER_LVL_MODE_COUNT][HALL_RECORDS_COUNT]; // From record mixing.
     /*0x57C*/ struct RankingHall2P hallRecords2P[FRONTIER_LVL_MODE_COUNT][HALL_RECORDS_COUNT]; // From record mixing.
 #endif //FREE_RECORD_MIXING_HALL_RECORDS
-    /*0x624*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
+     /*0x624*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
     /*0x64C*/ struct BattleFrontier frontier;
-}; // sizeof=0xF2C
+    // Pokémon Daydream additions
+    struct WardrobeState wardrobe;      // 13 bytes: 5 equipped + 8 bitmap
+    u8 optionsPerfectStats:1;           // 1 bit: Perfect IVs/EVs toggle
+    u8 saveBlockPadding:7;              // padding to align to byte
+}; // sizeof updated
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
 
@@ -1196,6 +1202,8 @@ struct SaveBlock1
     /*0x3???*/ struct TrainerHillSave trainerHill;
 #endif //FREE_TRAINER_HILL
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
+    // Pokémon Daydream additions
+    struct QuestLogState questLog;      // 128 bytes: 4 bits × 256 quests
 #if FREE_TRAINER_TOWER == FALSE && IS_FRLG
     u32 towerChallengeId;
     struct TrainerTower trainerTower[NUM_TOWER_CHALLENGE_TYPES];
