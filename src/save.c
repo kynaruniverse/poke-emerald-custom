@@ -12,6 +12,9 @@
 #include "trainer_hill.h"
 #include "link.h"
 #include "constants/game_stat.h"
+#include "wardrobe.h"
+#include "quest_log_custom.h"
+#include "pokemon_needs.h"
 
 static u16 CalculateChecksum(void *, u16);
 static bool8 ReadFlashSector(u8, struct SaveSector *);
@@ -895,6 +898,19 @@ u8 LoadGameSave(u8 saveType)
     default:
         status = TryLoadSaveSlot(FULL_SAVE_SLOT, gRamSaveSectorLocations);
         CopyPartyAndObjectsFromSave();
+
+        // ===============================
+        // Pokémon Daydream Initialization Hook
+        // (No save version system exists in this branch)
+        // ===============================
+        if (status == SAVE_STATUS_OK)
+        {
+         memset(&gSaveBlock2Ptr->wardrobe, 0, sizeof(gSaveBlock2Ptr->wardrobe));
+         memset(&gSaveBlock1Ptr->questLog, 0, sizeof(gSaveBlock1Ptr->questLog));
+        gSaveBlock2Ptr->optionsPerfectStats = 0;
+        }
+// ===============================
+
         gSaveFileStatus = status;
         gGameContinueCallback = NULL;
         break;
