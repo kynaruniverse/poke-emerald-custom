@@ -4571,7 +4571,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         )
         .levelUpLearnset = sDelcattyLevelUpLearnset,
         .teachableLearnset = sDelcattyTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_TRADE_ITEM, ITEM_COMFY_BEDROLL, SPECIES_DELCATNAP}),
     },
 #endif //P_FAMILY_SKITTY
 
@@ -7318,9 +7317,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .levelUpLearnset = sSpindaLevelUpLearnset,
         .teachableLearnset = sSpindaTeachableLearnset,
         .eggMoveLearnset = sSpindaEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_SPINDREAM, CONDITIONS({IF_NEEDS_MAXED})}),
     },
-
 #endif //P_FAMILY_SPINDA
 
 #if P_FAMILY_TRAPINCH

@@ -4300,10 +4300,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachingType = TM_ILLITERATE,
         .levelUpLearnset = sWobbuffetLevelUpLearnset,
         .teachableLearnset = sWobbuffetTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_WOBBUSNORE, CONDITIONS({IF_SLEEPING})}),
     },
 #endif //P_FAMILY_WOBBUFFET
-
 
 #if P_FAMILY_GIRAFARIG
     [SPECIES_GIRAFARIG] =
@@ -4675,15 +4673,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sDunsparceLevelUpLearnset,
         .teachableLearnset = sDunsparceTeachableLearnset,
         .eggMoveLearnset = sDunsparceEggMoveLearnset,
-        .evolutions = EVOLUTION(
-        // Your Custom Daydream Evolution
-            {EVO_LEVEL, 30, SPECIES_LULLSPARCE, CONDITIONS({IF_IS_NIGHT}, {IF_MIN_FRIENDSHIP, 160})},
-            // Existing Gen 9 Evolutions
-        #if P_GEN_9_CROSS_EVOS
-            {EVO_LEVEL, 0, SPECIES_DUDUNSPARCE_TWO_SEGMENT, CONDITIONS({IF_KNOWS_MOVE, MOVE_HYPER_DRILL}, {IF_PID_MODULO_100_GT, 0})},
-            {EVO_LEVEL, 0, SPECIES_DUDUNSPARCE_THREE_SEGMENT, CONDITIONS({IF_KNOWS_MOVE, MOVE_HYPER_DRILL}, {IF_PID_MODULO_100_EQ, 0})},
-        #endif
-        ),
+    #if P_GEN_9_CROSS_EVOS
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_DUDUNSPARCE_TWO_SEGMENT, CONDITIONS({IF_KNOWS_MOVE, MOVE_HYPER_DRILL}, {IF_PID_MODULO_100_GT, 0})},
+                                {EVO_LEVEL, 0, SPECIES_DUDUNSPARCE_THREE_SEGMENT, CONDITIONS({IF_KNOWS_MOVE, MOVE_HYPER_DRILL}, {IF_PID_MODULO_100_EQ, 0})}),
+    #endif
+    },
 
 #if P_GEN_9_CROSS_EVOS
     [SPECIES_DUDUNSPARCE_TWO_SEGMENT] =
@@ -7771,15 +7765,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sStantlerLevelUpLearnset,
         .teachableLearnset = sStantlerTeachableLearnset,
         .eggMoveLearnset = sStantlerEggMoveLearnset,
-        .evolutions = EVOLUTION(
-            // Your Custom Daydream Evolution
-            {EVO_ITEM, ITEM_DREAM_ANTLER, SPECIES_STAGSOMNE},
-            // Existing Gen 8 Evolution
-        #if P_GEN_8_CROSS_EVOS
-            {EVO_LEVEL, 0, SPECIES_WYRDEER, CONDITIONS({IF_USED_MOVE_X_TIMES, MOVE_PSYSHIELD_BASH, 20})},
-        #endif
-        ),
-
+    #if P_GEN_8_CROSS_EVOS
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_WYRDEER, CONDITIONS({IF_USED_MOVE_X_TIMES, MOVE_PSYSHIELD_BASH, 20})}),
+    #endif
+    },
 
 #if P_GEN_8_CROSS_EVOS
     [SPECIES_WYRDEER] =
