@@ -12,7 +12,11 @@
 #include "trainer_hill.h"
 #include "link.h"
 #include "constants/game_stat.h"
+#include "pokemon_needs.h"
+#include "wardrobe.h"
+#include "quest_log_custom.h"
 
+#define SAVE_VERSION_DAYDREAM_1  2
 static u16 CalculateChecksum(void *, u16);
 static bool8 ReadFlashSector(u8, struct SaveSector *);
 static u8 GetSaveValidStatus(const struct SaveSectorLocation *);
@@ -896,20 +900,21 @@ u8 LoadGameSave(u8 saveType)
         status = TryLoadSaveSlot(FULL_SAVE_SLOT, gRamSaveSectorLocations);
         CopyPartyAndObjectsFromSave();
         gSaveFileStatus = status;
+
+        // Pokémon Daydream save migration
+        // If loading a save from before Daydream features were added, initialize them.
+        if (gSaveBlock2Ptr->optionsPerfectStats == 0 && gSaveBlock2Ptr->wardrobe.equipped[0] == 0)
+        {
+            u8 i;
+            for (i = 0; i < PARTY_SIZE; i++)
+                NeedsInitMon(i);
+
+            memset(&gSaveBlock2Ptr->wardrobe, 0, sizeof(struct WardrobeState));
+            memset(&gSaveBlock1Ptr->questLog, 0, sizeof(struct QuestLogState));
+            gSaveBlock2Ptr->optionsPerfectStats = 0;
+        }
+
         gGameContinueCallback = NULL;
-        break;
-    case SAVE_HALL_OF_FAME:
-        if (gHoFSaveBuffer != NULL)
-        {
-            u8 *hofData = (u8 *) gHoFSaveBuffer;
-            status = TryLoadSaveSector(SECTOR_ID_HOF_1, hofData, SECTOR_DATA_SIZE);
-            if (status == SAVE_STATUS_OK)
-                status = TryLoadSaveSector(SECTOR_ID_HOF_2, &hofData[SECTOR_DATA_SIZE], SECTOR_DATA_SIZE);
-        }
-        else
-        {
-            status = SAVE_STATUS_ERROR;
-        }
         break;
     }
 
