@@ -902,17 +902,24 @@ u8 LoadGameSave(u8 saveType)
         gSaveFileStatus = status;
 
         // Pokémon Daydream save migration
-        // If loading a save from before Daydream features were added, initialize them.
-        if (gSaveBlock2Ptr->optionsPerfectStats == 0 && gSaveBlock2Ptr->wardrobe.equipped[0] == 0)
+        // If loading a save from before Daydream was added, initialise new fields.
+        if (loadedSaveVersion < SAVE_VERSION_DAYDREAM_1)
         {
             u8 i;
+            // Initialise Needs to 80 (not 0) for all party Pokémon
             for (i = 0; i < PARTY_SIZE; i++)
                 NeedsInitMon(i);
 
+            // Zero-fill wardrobe (no outfits unlocked)
             memset(&gSaveBlock2Ptr->wardrobe, 0, sizeof(struct WardrobeState));
+
+            // Zero-fill quest log (no quests started)
             memset(&gSaveBlock1Ptr->questLog, 0, sizeof(struct QuestLogState));
+
+            // Default Perfect Stats to OFF
             gSaveBlock2Ptr->optionsPerfectStats = 0;
         }
+
 
         gGameContinueCallback = NULL;
         break;
