@@ -1,6 +1,9 @@
 #ifndef GUARD_CONSTANTS_POKEMON_H
 #define GUARD_CONSTANTS_POKEMON_H
 
+#include "constants/map_sections.h" // For EVO_LEVEL_IN_SPECIAL_MAP
+#include "constants/items.h"        // For EVO_TRADE_ITEM, EVO_LEVEL_ITEM_HOLD
+
 // Pokémon types
 enum __attribute__((packed)) Type
 {
@@ -300,9 +303,16 @@ enum EvolutionConditions {
     IF_WEATHER,                         // It is currently the specific weather in the current map.
     IF_KNOWS_MOVE_TYPE,                 // The Pokémon knows a move with a specific type.
     // Gen 8
-    IF_NATURE,                          // The Pokémon has a specific nature.
+        IF_NATURE,                          // The Pokémon has a specific nature.
     IF_AMPED_NATURE,                    // The Pokémon has one of the following natures: Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky.
     IF_LOW_KEY_NATURE,                  // The Pokémon has one of the following natures: Lonely, Bold, Relaxed, Timid, Serious, Modest, Mild, Quiet, Bashful, Calm, Gentle, or Careful.
+    // Pokémon Daydream additions
+    EVO_LEVEL_NIGHT_FRIENDSHIP,         // Level up at night with high friendship
+    EVO_LEVEL_SLEEP,                    // Level up while Pokémon has sleep status
+    EVO_LEVEL_NEEDS_MAX,                // Level up with all Needs ≥ NEED_THRIVING
+    EVO_LEVEL_IN_SPECIAL_MAP,           // Level up while in a specific map group
+    EVO_TRADE_ITEM,                     // Trade while holding a specific item
+    EVO_LEVEL_ITEM_HOLD,                // Level up while holding a specific item
     IF_RECOIL_DAMAGE_GE,                // The Pokémon suffered at least certain amount of non-fainting recoil damage.
     IF_CURRENT_DAMAGE_GE,               // The Pokémon has the specified difference of HP from its Max HP.
     IF_CRITICAL_HITS_GE,                // The Pokémon performed the specified number of critical hits in one battle at least.
@@ -320,15 +330,22 @@ enum EvolutionConditions {
 };
 
 enum EvolutionMethods {
-    EVO_NONE,                   // Not an actual evolution, used to generate offspring that can't evolve into the specified species, like regional forms.
+    EVO_NONE,                   // Not an actual evolution
     EVO_LEVEL,                  // Pokémon reaches the specified level
     EVO_TRADE,                  // Pokémon is traded
     EVO_ITEM,                   // specified item is used on Pokémon
-    EVO_SPLIT_FROM_EVO,         // A clone is generated and evolved when another evolution happens
+    EVO_SPLIT_FROM_EVO,         // A clone is generated and evolved
     EVO_SCRIPT_TRIGGER,         // Player interacts with an overworld trigger
     EVO_LEVEL_BATTLE_ONLY,      // Pokémon reaches the specified level, in battle only
     EVO_BATTLE_END,             // Battle ends, doesn't need to level up
-    EVO_SPIN                    // The player spins in the overworld
+    EVO_SPIN,                   // The player spins in the overworld
+    // Pokémon Daydream additions
+    EVO_LEVEL_NIGHT_FRIENDSHIP, 
+    EVO_LEVEL_SLEEP,            
+    EVO_LEVEL_NEEDS_MAX,        
+    EVO_LEVEL_IN_SPECIAL_MAP,   
+    EVO_TRADE_ITEM,             
+    EVO_LEVEL_ITEM_HOLD         
 };
 
 enum EvolutionMode {
