@@ -15,6 +15,12 @@
 #include "wardrobe.h"
 #include "quest_log_custom.h"
 #include "pokemon_needs.h"
+#include "pokemon_needs.h"
+#include "wardrobe.h"
+#include "quest_log_custom.h"
+
+#define SAVE_VERSION_DAYDREAM_1  2 
+
 
 static u16 CalculateChecksum(void *, u16);
 static bool8 ReadFlashSector(u8, struct SaveSector *);
@@ -519,8 +525,30 @@ static u8 CopySaveSlotData(u16 sectorId, struct SaveSectorLocation *locations)
         }
     }
 
+    // --- Pokémon Daydream Migration Start ---
+    // We use a GameStat or a specific flag to check if this is a "Fresh" Daydream save.
+    // If it's an old save, we initialize the new systems.
+    if (gSaveBlock2Ptr->playerTrainerId[0] != 0 && gSaveBlock2Ptr->optionsPerfectStats == 0)
+    {
+        u8 k;
+        // Initialise Needs for all party Pokémon
+        for (k = 0; k < PARTY_SIZE; k++)
+            NeedsInitMon(k);
+
+        // Zero-fill wardrobe
+        memset(&gSaveBlock2Ptr->wardrobe, 0, sizeof(struct WardrobeState));
+
+        // Zero-fill quest log
+        memset(&gSaveBlock1Ptr->questLog, 0, sizeof(struct QuestLogState));
+
+        // Mark as initialized
+        gSaveBlock2Ptr->optionsPerfectStats = 0; 
+    }
+    // --- Pokémon Daydream Migration End ---
+
     return SAVE_STATUS_OK;
 }
+
 
 static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
 {
