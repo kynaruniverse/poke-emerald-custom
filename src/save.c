@@ -526,14 +526,15 @@ static u8 CopySaveSlotData(u16 sectorId, struct SaveSectorLocation *locations)
     }
 
     // --- Pokémon Daydream Migration Start ---
-    // We use a GameStat or a specific flag to check if this is a "Fresh" Daydream save.
-    // If it's an old save, we initialize the new systems.
+    // We check if this is a "Fresh" Daydream save by looking for the Perfect Stats flag.
     if (gSaveBlock2Ptr->playerTrainerId[0] != 0 && gSaveBlock2Ptr->optionsPerfectStats == 0)
     {
         u8 k;
-        // Initialise Needs for all party Pokémon
-        for (k = 0; k < PARTY_SIZE; k++)
-            NeedsInitMon(k);
+        // Corrected: Loop through the party and pass the actual Pokémon structure
+        for (k = 0; k < gSaveBlock1Ptr->playerPartyCount; k++)
+        {
+            NeedsInitMon(&gSaveBlock1Ptr->playerParty[k]);
+        }
 
         // Zero-fill wardrobe
         memset(&gSaveBlock2Ptr->wardrobe, 0, sizeof(struct WardrobeState));
@@ -541,7 +542,7 @@ static u8 CopySaveSlotData(u16 sectorId, struct SaveSectorLocation *locations)
         // Zero-fill quest log
         memset(&gSaveBlock1Ptr->questLog, 0, sizeof(struct QuestLogState));
 
-        // Mark as initialized
+        // Default Perfect Stats to OFF
         gSaveBlock2Ptr->optionsPerfectStats = 0; 
     }
     // --- Pokémon Daydream Migration End ---
