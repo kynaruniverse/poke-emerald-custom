@@ -4920,6 +4920,25 @@ bool32 DoesMonMeetAdditionalConditions(struct Pokemon *mon, const struct Evoluti
             if (GetCurrentRegion() != params[i].arg1)
                 currentCondition = TRUE;
             break;
+
+        // Pokemon Daydream Custom Conditions
+        case IF_SLEEPING:
+            if (GetMonData(mon, MON_DATA_STATUS) & STATUS1_SLEEP)
+                currentCondition = TRUE;
+            break;
+
+        case IF_NEEDS_MAXED:
+            if (GetNeedState(partyId, NEED_HUNGER)    >= NEED_THRIVING &&
+                GetNeedState(partyId, NEED_ATTENTION) >= NEED_THRIVING &&
+                GetNeedState(partyId, NEED_REST)      >= NEED_THRIVING)
+                currentCondition = TRUE;
+            break;
+
+        case IF_IS_NIGHT:
+            if (IsNightTime())
+                currentCondition = TRUE;
+            break;
+
         case CONDITIONS_END:
             break;
         }
@@ -4989,6 +5008,17 @@ u32 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
                 if (evolutions[i].param <= level)
                     conditionsMet = TRUE;
                 break;
+            case EVO_LEVEL_ITEM_HOLD:
+                if (evolutions[i].param <= level && heldItem == evolutions[i].param2)
+                    conditionsMet = TRUE;
+                break;
+            
+            case EVO_TRADE_ITEM:
+                // This is usually handled during a trade trigger
+                if (mode == EVO_MODE_TRADE && heldItem == evolutions[i].param)
+                    conditionsMet = TRUE;
+                break;
+
             case EVO_LEVEL_BATTLE_ONLY:
                 if (mode == EVO_MODE_BATTLE_ONLY && evolutions[i].param <= level)
                     conditionsMet = TRUE;
