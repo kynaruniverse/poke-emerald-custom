@@ -5334,6 +5334,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .eggMoveLearnset = sDrampaEggMoveLearnset,
         .formSpeciesIdTable = sDrampaFormSpeciesIdTable,
         .formChangeTable = sDrampaFormChangeTable,
+        .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_DRAMPIRE, CONDITIONS({IF_IN_MAPSEC, MAPSEC_THE_HOLLOW})}),
     },
 
 #if P_GEN_9_MEGA_EVOLUTIONS
