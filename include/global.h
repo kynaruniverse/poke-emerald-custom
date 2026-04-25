@@ -11,6 +11,8 @@
 #include "fpmath.h"
 #include "metaprogram.h"
 #include "constants/global.h"
+#include "wardrobe.h"
+#include "quest_log_custom.h"
 #include "constants/flags.h"
 #include "constants/vars.h"
 #include "constants/species.h"
@@ -619,7 +621,12 @@ struct SaveBlock2
 #endif //FREE_RECORD_MIXING_HALL_RECORDS
     /*0x624*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
     /*0x64C*/ struct BattleFrontier frontier;
-}; // sizeof=0xF2C
+    // Pokémon Daydream additions
+    struct WardrobeState wardrobe;      // 13 bytes: 5 equipped + 8 bitmap
+    u8 optionsPerfectStats:1;           // 1 bit: Perfect IVs/EVs toggle
+    u8 saveBlockPadding:7;              // padding to align to byte
+}; 
+
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
 
@@ -1196,6 +1203,9 @@ struct SaveBlock1
     /*0x3???*/ struct TrainerHillSave trainerHill;
 #endif //FREE_TRAINER_HILL
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
+    // Pokémon Daydream additions
+    struct QuestLogState questLog;      // 128 bytes: 4 bits × 256 quests
+
 #if FREE_TRAINER_TOWER == FALSE && IS_FRLG
     u32 towerChallengeId;
     struct TrainerTower trainerTower[NUM_TOWER_CHALLENGE_TYPES];
@@ -1204,7 +1214,6 @@ struct SaveBlock1
     u8 rivalName[PLAYER_NAME_LENGTH + 1];
     struct DaycareMon route5DayCareMon;
 #endif
-    // sizeof: 0x3???
 };
 
 extern struct SaveBlock1 *gSaveBlock1Ptr;
