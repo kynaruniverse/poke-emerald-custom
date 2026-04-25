@@ -1630,6 +1630,22 @@
       "y": 4,
       "width": 1,
       "height": 1
+    },
+        {
+      "id": "MAPSEC_CINDERPINE",
+      "name": "CINDERPINE",
+      "x": 10,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_THE_HOLLOW",
+      "name": "THE HOLLOW",
+      "x": 11,
+      "y": 12,
+      "width": 1,
+      "height": 1
     }
   ]
 }
