@@ -1,7 +1,7 @@
 GAME_VERSION ?= EMERALD
-TITLE        ?= POKEMON EMER
-GAME_CODE    ?= BPEE
-BUILD_NAME   ?= emerald
+TITLE        ?= POKEMON DAYDREAM
+GAME_CODE    ?= BPED
+BUILD_NAME   ?= daydream
 MAP_VERSION  ?= emerald
 
 ifeq (firered, $(or $(BUILD), $(MAKECMDGOALS)))
@@ -146,7 +146,10 @@ SHELL := bash -o pipefail
 # Set flags for tools
 ASFLAGS := -mcpu=arm7tdmi -march=armv4t -meabi=5 --defsym MODERN=1 --defsym $(GAME_VERSION)=1
 
-INCLUDE_DIRS := include
+INCLUDE_DIRS := include \
+	include/constants \
+	include/config \
+	include/daydream
 INCLUDE_CPP_ARGS := $(INCLUDE_DIRS:%=-iquote %)
 INCLUDE_SCANINC_ARGS := $(INCLUDE_DIRS:%=-I %)
 
@@ -305,6 +308,17 @@ endif
 C_SRCS_IN := $(wildcard $(C_SUBDIR)/*.c $(C_SUBDIR)/*/*.c $(C_SUBDIR)/*/*/*.c)
 C_SRCS := $(foreach src,$(C_SRCS_IN),$(if $(findstring .inc.c,$(src)),,$(src)))
 C_OBJS := $(patsubst $(C_SUBDIR)/%.c,$(C_BUILDDIR)/%.o,$(C_SRCS))
+
+# Pokémon Daydream Source Files
+C_SRCS += \
+	src/daydream/wardrobe.c \
+	src/daydream/pokemon_needs.c \
+	src/daydream/quest_log_custom.c \
+	src/daydream/procgen_dungeon.c \
+	src/daydream/soft_scaling.c \
+	src/daydream/camp.c \
+	src/daydream/ability_effects.c \
+	src/daydream/item_use_daydream.c
 
 TEST_SRCS_IN := $(wildcard $(TEST_SUBDIR)/*.c $(TEST_SUBDIR)/*/*.c $(TEST_SUBDIR)/*/*/*.c)
 TEST_SRCS := $(foreach src,$(TEST_SRCS_IN),$(if $(findstring .inc.c,$(src)),,$(src)))
