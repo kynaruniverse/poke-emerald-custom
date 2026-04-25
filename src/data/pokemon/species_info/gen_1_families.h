@@ -15942,8 +15942,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sMimeJrLevelUpLearnset,
         .teachableLearnset = sMimeJrTeachableLearnset,
         .eggMoveLearnset = sMimeJrEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_MR_MIME, CONDITIONS({IF_KNOWS_MOVE, MOVE_MIMIC}, {IF_NOT_REGION, REGION_GALAR})}
-                            #if P_GALARIAN_FORMS
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_MR_MIMIC, .params = (const struct EvolutionParam[]) {
+            {IF_HOLD_ITEM, ITEM_COMEDY_MASK},
+            {CONDITIONS_END}
+        }}),       
+            #if P_GALARIAN_FORMS
                                 ,{EVO_LEVEL, 0, SPECIES_MR_MIME_GALAR, CONDITIONS({IF_KNOWS_MOVE, MOVE_MIMIC}, {IF_REGION, REGION_GALAR})}
                             #endif
                             ),
@@ -19514,7 +19517,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sMunchlaxLevelUpLearnset,
         .teachableLearnset = sMunchlaxTeachableLearnset,
         .eggMoveLearnset = sMunchlaxEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SNORLAX, CONDITIONS({IF_MIN_FRIENDSHIP, FRIENDSHIP_EVO_THRESHOLD})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_SNORPINE, .params = (const struct EvolutionParam[]) {
+            {IF_IN_MAPSEC, MAPSEC_CINDERPINE},
+            {CONDITIONS_END}
+        }}),     
     },
 #endif //P_GEN_4_CROSS_EVOS
 
