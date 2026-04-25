@@ -23,13 +23,13 @@
 #define P_MEGA_EVOLUTIONS                TRUE
 #define P_PRIMAL_REVERSIONS              TRUE // Groudon and Kyogre only.
 #define P_ULTRA_BURST_FORMS              TRUE // Ultra Necrozma only.
-#define P_GIGANTAMAX_FORMS               TRUE
+#define P_GIGANTAMAX_FORMS               FALSE
 #define P_TERA_FORMS                     TRUE
 
 #define P_GEN_9_MEGA_EVOLUTIONS          P_MEGA_EVOLUTIONS // Mega Evolutions introduced in Z-A and its DLC
 
 // Fusion forms
-#define P_FUSION_FORMS                   TRUE
+#define P_FUSION_FORMS                   FALSE
 
 // Regional Forms. Includes Regional Form evolutions, like Sirfetch'd.
 #define P_REGIONAL_FORMS                 TRUE
@@ -40,8 +40,8 @@
 
 // Big groups of forms that aren't always desired when choosing families.
 #define P_PIKACHU_EXTRA_FORMS            TRUE
-#define P_COSPLAY_PIKACHU_FORMS          P_PIKACHU_EXTRA_FORMS
-#define P_CAP_PIKACHU_FORMS              P_PIKACHU_EXTRA_FORMS
+#define P_COSPLAY_PIKACHU_FORMS          FALSE
+#define P_CAP_PIKACHU_FORMS              FALSE
 
 // Cross-generation evolutions. Includes pre-evolutions.
 #define P_CROSS_GENERATION_EVOS          TRUE
