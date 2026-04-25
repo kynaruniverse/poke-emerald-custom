@@ -1,9 +1,7 @@
 GAME_VERSION ?= EMERALD
-# Daydream: ROM header rebrand. 12-char limit on TITLE field.
-# GAME_CODE intentionally left as BPEE to preserve expansion save/patch compatibility.
-TITLE        ?= POKEDAYDREAM
-GAME_CODE    ?= BPEE
-BUILD_NAME   ?= emerald
+TITLE        ?= POKEMON DAYDREAM
+GAME_CODE    ?= BPED
+BUILD_NAME   ?= daydream
 MAP_VERSION  ?= emerald
 
 ifeq (firered, $(or $(BUILD), $(MAKECMDGOALS)))
@@ -148,7 +146,7 @@ SHELL := bash -o pipefail
 # Set flags for tools
 ASFLAGS := -mcpu=arm7tdmi -march=armv4t -meabi=5 --defsym MODERN=1 --defsym $(GAME_VERSION)=1
 
-INCLUDE_DIRS := include
+INCLUDE_DIRS := include include/daydream
 INCLUDE_CPP_ARGS := $(INCLUDE_DIRS:%=-iquote %)
 INCLUDE_SCANINC_ARGS := $(INCLUDE_DIRS:%=-I %)
 
